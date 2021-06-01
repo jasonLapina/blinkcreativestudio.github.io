@@ -427,6 +427,7 @@ a.button-slanted.stroke-btn {
 .navbar.shadow {
   -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.07), 0px 3px 15px rgba(0, 0, 0, 0.05);
           box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.07), 0px 3px 15px rgba(0, 0, 0, 0.05);
+  top: 0;
   -webkit-transition: all ease 150ms;
   transition: all ease 150ms;
 }
@@ -1147,6 +1148,11 @@ form #mce-error-response a {
 
 .thumb .thumb-video {
   aspect-ratio: 201/155;
+  color: transparent;
+  background: linear-gradient(100deg, #eceff1 30%, #f6f7f8 50%, #eceff1 70%);
+  background-size: 400%;
+  -webkit-animation: loading 1.2s ease-in-out infinite;
+          animation: loading 1.2s ease-in-out infinite;
 }
 
 .thumb .thumb-details {
@@ -1160,6 +1166,30 @@ form #mce-error-response a {
 
 .thumb:hover .thumb-details, .thumb:hover .vid-icon {
   opacity: 0;
+}
+
+@-webkit-keyframes loading {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+@keyframes loading {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+@media (min-width: 1020px) {
+  .thumb-video {
+    min-height: 368px;
+  }
 }
 
 @media (max-width: 1020px) {

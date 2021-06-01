@@ -1,6 +1,6 @@
-// $(document).ready(function(){
-//   $(this).scrollTop(0);
-// });
+$(document).ready(function(){
+  $(this).scrollTop(0);
+});
 
 // Animation on Scroll
 AOS.init({
@@ -45,8 +45,8 @@ $('#menu-contact').click(function(){
 
   // Navbar Scroll Effect
   $(function(){
-    var prevScroll = 10,
-        startScroll = 5,
+    var prevScroll = 1,
+        startScroll = 0,
         curDir = 'down',
         prevDir = 'up';
 
@@ -55,11 +55,12 @@ $('#menu-contact').click(function(){
             curDir = 'down';
             if(curDir != prevDir){
             $('.navbar').stop();
-            $('.navbar').animate({ top: '-64px' }, 150);
+            $('.navbar').addClass('shadow');
             prevDir = curDir;
             }
         }  else if($(this).scrollTop() <= startScroll) {
           $('.navbar').removeClass('shadow');
+          prevDir = curDir;
         } else {
           curDir = 'up';
           if(curDir != prevDir){
