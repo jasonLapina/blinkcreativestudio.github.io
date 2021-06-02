@@ -65,7 +65,6 @@ $('#menu-contact').click(function(){
           curDir = 'up';
           if(curDir != prevDir){
           $('.navbar').stop();
-          $('.navbar').animate({ top: '0px' }, 150);
           $('.navbar').addClass('shadow');
           prevDir = curDir;
           }
