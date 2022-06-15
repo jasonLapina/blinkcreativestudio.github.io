@@ -48,36 +48,54 @@ const renderCalendar = () => {
 
   let days = "";
 
+  // Setup last days of last month
   for (let x = firstDayIndex; x > 0; x--) {
-    days += `<div class="prev-date">${prevLastDay - x + 1}</div>`;
+    days += `<button class="prev-date day">${prevLastDay - x + 1}</button>`;
   }
 
+  // Setup days of the current month
+  dateTemp = new Date(date.getFullYear(), date.getMonth(), 1);
+
   for (let i = 1; i <= lastDay; i++) {
-    if (
-      i === new Date().getDate() &&
-      date.getMonth() === new Date().getMonth()
-    ) {
-      days += `<div class="today">${i}</div>`;
+    if ( i === new Date().getDate() && date.getMonth() === new Date().getMonth() && date.getFullYear() === new Date().getFullYear()) {
+      dateTemp.setDate(i);
+      days += `<button class="day ofMonth" id="today" value="${dateTemp.toDateString()}">${i}</button>`;
     } else {
-      days += `<div>${i}</div>`;
+      dateTemp.setDate(i);
+      days += `<button class="day ofMonth" value="${dateTemp.toDateString()}">${i}</button>`;
     }
   }
 
+  // Setup days of the next month
   for (let j = 1; j <= nextDays; j++) {
-    days += `<div class="next-date">${j}</div>`;
+    days += `<button class="next-date day">${j}</button>`;
   }
 
   monthDays.innerHTML = days;
+
+  // Add event listeners to each day of the current month
+  buttons = document.querySelectorAll("button.day.ofMonth");
+
+  buttons.forEach(button => {
+    button.addEventListener("click", showDate, false);
+  });
+
 };
 
+const showDate = (e) => {
+  alert(`${e.target.value} was clicked.`)
+}
+
+renderCalendar();
+
+// Previous month button "<" 
 document.querySelector(".prev").addEventListener("click", () => {
   date.setMonth(date.getMonth() - 1);
   renderCalendar();
 });
 
+// Next month button ">"
 document.querySelector(".next").addEventListener("click", () => {
   date.setMonth(date.getMonth() + 1);
   renderCalendar();
 });
-
-renderCalendar();

@@ -23,11 +23,11 @@
     --white: #ffffff;
   }
 
-  html {
+  /* html {
     font-size: 62.5%;
-  }
+  } */
   
-  .container {
+  .calendar-container {
     width: 100%;
     height: 100vh;
     color: var(--gray-900);
@@ -39,7 +39,7 @@
   .calendar {
     width: 45rem;
     height: 52rem;
-    box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.4);
+    border: solid 1px rgba(0, 0, 0, 0.1);
   }
   
   .month {
@@ -96,7 +96,7 @@
     padding: 0.2rem;
   }
   
-  .days div {
+  .days button {
     font-size: 1.4rem;
     margin: 0.3rem;
     width: calc(40.2rem / 7);
@@ -105,9 +105,11 @@
     justify-content: center;
     align-items: center;
     transition: background-color 0.2s;
+    background-color: #FFF;
+    border: none;
   }
   
-  .days div:hover:not(.today) {
+  .days button:hover:not(#today, .prev-date, .ne) {
     border: 0.2rem solid #777;
     cursor: pointer;
   }
@@ -117,7 +119,8 @@
     opacity: 0.5;
   }
   
-  .today {
+  #today {
     background-color: var(--primary-color);
-    color: var(--gray-50)
+    color: var(--gray-50);
+    cursor: pointer;
   }
