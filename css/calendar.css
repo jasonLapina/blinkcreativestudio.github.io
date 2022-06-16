@@ -124,3 +124,14 @@
     color: var(--gray-50);
     cursor: pointer;
   }
+
+  .schedule {
+    width: 25rem;
+    height: 52rem;
+    border: solid 1px rgba(0, 0, 0, 0.1);
+  }
+
+  .schedule-title {
+    text-align: center;
+    padding: 1rem 0;
+  }
