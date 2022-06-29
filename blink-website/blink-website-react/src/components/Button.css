@@ -1,0 +1,87 @@
+
+@import url("https://use.typekit.net/fbr2wgc.css");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  --heading-font: "Aileron", sans-serif;
+  --body-font: "Inter", sans-serif;
+  --primary-color: #A30A24;
+  --gray-900: #191919;
+  --gray-800: #808080;
+  --gray-700: #6e6e6e;
+  --gray-600: #e8e8e8;
+  --gray-500: #b3b3b3;
+  --gray-400: #cacaca;
+  --gray-300: #e1e1e1;
+  --gray-200: #eaeaea;
+  --gray-100: #f5f5f5;
+  --gray-75: #fafafa;
+  --gray-50: #f2f2f2;
+  --white: #ffffff;
+}
+  
+  .btn {
+    padding: 8px 20px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .btn--primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: 2px solid var(--primary-color);
+  }
+  
+  .btn--outline {
+    background-color: transparent;
+    color: var(--primary-color);
+    padding: 8px 20px;
+    border: 1.5px solid var(--primary-color);
+    transition: all 0.3s ease-out;
+  }
+
+  .btn--subscription {
+    border-radius: 0%;
+    letter-spacing: 0.15em;
+    font-weight: 400;
+    text-transform: uppercase;
+    transform: skew(-10deg);
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: 2px solid var(--primary-color);
+  }
+  
+  .btn--medium {
+    padding: 10px 30px;
+    font-size: 1rem;
+  }
+  
+  .btn--large {
+    padding: 12px 26px;
+    font-size: 1.5rem;
+  }
+  
+  .btn--large:hover,
+  .btn--medium:hover {
+    transition: all 0.3s ease-in-out;
+    border: 2px solid transparent;
+    background: var(--primary-color);
+    color: var(--white);
+    transition: 250ms;
+  }
+
+  .btn--subscription:hover {
+    border-radius: 0%;
+    background-color: transparent;
+    border: 2px solid var(--white);
+    color: var(--white);
+  }
