@@ -22,6 +22,14 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/dist/aos/aos.css">
 
+     <!-- Font Awesome  -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+     <!-- Calendly link widget begin -->
+     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+     <!-- Calendly link widget end -->
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-196753480-1"></script>
     <script>
@@ -34,6 +42,27 @@
 </head>
 
 <body>
+    <!-- Start Modal -->
+    <div class="modal-container">
+        <i class="fa fa-close close-modal-button"></i>
+        <div class="modal">
+            <h1>Choose a package</h1>
+            <div class="package-container">
+                <div class="select-tag-container">
+                    <select name="package" class="dropdown-menu minimal" id="package">
+                        <option value="Studio Package">Studio Package</option>
+                        <option value="Graduation Package">Graduation Package</option>
+                        <option value="UP Graduation Package">UP Graduation Package</option>
+                    </select>
+                    <i class="fa fa-angle-down"></i>
+                </div> 
+                <button class="button-slanted modal-button open-calendly-modal" id="modal-next-btn"><span>Next</span></button>
+            </div>
+        </div>
+    </div>
+    <!-- End Modal -->
+
+    <!-- Start Nav  -->
     <nav class="navbar" data-aos="fade-in" data-aos-delay="50"> 
         <div class="container d-flex justify-content-between align-items-center">
             <a href="/" class="logo" aria-label="Go to homepage.">
@@ -55,6 +84,9 @@
                 <li><a class="menu" href="/works">Works</a></li>
                 <li class="active"><a class="menu" href="/studio">Studio</a></li>
                 <li><a class="menu" id="menu-contact" href="#contact">Contact</a></li>
+
+                <button class="button-slanted modal-button nav-button open-modal-button" id="book-now-btn"><span>Book Now</span></button>
+                
                 <li class="pt-5 hide-desktop"><span class="menu-span">Get in touch</span></li>
                 <li class="hide-desktop"><a class="menu-contact underline-100" href="mailto:hello@blinkcreativestudio.com">hello@blinkcreativestudio.com</a></li>
             </ul>   
@@ -135,16 +167,18 @@
                     <h2 class="heading4 c-g900 fw-700 mt-1">JM Gift</h2>
                     <p class="">Operations Manager</p>
                 </div>
+
                 <div class="col-md-4 my-4 px-2 px-lg-4 text-center">
                     <div class="pic">
-                        <img src="./assets/BCS_TP_Joshua.jpg" alt="" class="w-100">
+                        <img src="./assets/BCS_TP_Utes.jpg" alt="" class="w-100">
                         <div class="overlay p-3 d-flex align-items-center" onclick="">
-                            <p>Joshua believes the key to serve and empower communities is good design and technology. Just as how the internet was instrumental for discovering, supporting, and connecting with other artists. To materialize these dreams, he doesn't skip breakfast. </p>
+                            <p>A self-proclaimed rapper and an avid siomai-lover; Utes is Blink Creative Studio’s comedian show-stopper. With humor so dark that it makes our sighs the deepest, we always wonder why he's our graphic artist.</p>
                         </div>
                     </div>
-                    <h2 class="heading4 c-g900 fw-700 mt-1">Joshua Salazar</h2>
-                    <p class="">Front-End Developer</p>
+                    <h2 class="heading4 c-g900 fw-700 mt-1">Utes Salazar</h2>
+                    <p class="">Art Director</p>
                 </div>
+                
                 <div class="col-md-4 my-4 px-2 px-lg-4 text-center">
                     <div class="pic">
                         <img src="./assets/BCS_TP_Sam.jpg" alt="" class="w-100">
@@ -155,16 +189,7 @@
                     <h2 class="heading4 c-g900 fw-700 mt-1">Sam Lapie</h2>
                     <p class="">Video Editor/Animator</p>
                 </div>
-                <div class="col-md-4 my-4 px-2 px-lg-4 text-center">
-                    <div class="pic">
-                        <img src="./assets/BCS_TP_Utes.jpg" alt="" class="w-100">
-                        <div class="overlay p-3 d-flex align-items-center" onclick="">
-                            <p>A self-proclaimed rapper and an avid siomai-lover; Utes is Blink Creative Studio’s comedian show-stopper. With humor so dark that it makes our sighs the deepest, we always wonder why he's our graphic artist.</p>
-                        </div>
-                    </div>
-                    <h2 class="heading4 c-g900 fw-700 mt-1">Utes Salazar</h2>
-                    <p class="">Graphic Artist</p>
-                </div>
+                
                 <div class="col-md-4 my-4 px-2 px-lg-4 text-center">
                     <div class="pic">
                         <img src="./assets/BCS_TP_Lyle.jpg" alt="" class="w-100">
@@ -175,26 +200,7 @@
                     <h2 class="heading4 c-g900 fw-700 mt-1">Lyle Belsonda</h2>
                     <p class="">Graphic Designer</p>
                 </div>
-                <div class="col-md-4 my-4 px-2 px-lg-4 text-center">
-                    <div class="pic">
-                        <img src="./assets/BCS_TP_Lia.jpg" alt="" class="w-100">
-                        <div class="overlay p-3 d-flex align-items-center" onclick="">
-                            <p>For most days of the week, Lia is the first to arrive and the last to leave the studio. She is very task-oriented and adaptable to work with. Although she likes to challenge norms, she can't help but subscribe to the K-drama and J-pop mania. </p>
-                        </div>
-                    </div>
-                    <h2 class="heading4 c-g900 fw-700 mt-1">Lia Silot</h2>
-                    <p class="">Admin Officer</p>
-                </div>
-                <div class="col-md-4 my-4 px-2 px-lg-4 text-center">
-                    <div class="pic">
-                        <img src="./assets/BCS_TP_Ey.jpg" alt="" class="w-100">
-                        <div class="overlay p-3 d-flex align-items-center" onclick="">
-                            <p>Despite beer consumption, an insatiable appetite, and a previous pregnancy, Ey still has her beauty pageant figure. She got her office nickname “Inday” for a convincing impersonation of a household nanny. Past her resting bitch face is a warm and free-spirited lass.</p>
-                        </div>
-                    </div>
-                    <h2 class="heading4 c-g900 fw-700 mt-1">Ey Almadovar</h2>
-                    <p class="">Admin Assistant</p>
-                </div>
+
                 <div class="col-md-4 my-4 px-2 px-lg-4 text-center">
                     <div class="pic">
                        <img src="./assets/BCS_TP_Gio.jpg" alt="" class="w-100">
@@ -205,7 +211,6 @@
                     <h2 class="heading4 c-g900 fw-700 mt-1">Gio Alvarez</h2>
                     <p class="">Production Assistant</p>
                 </div>
-
                 <div class="col-md-4 my-4 px-2 px-lg-4 text-center">
                     <div class="pic">
                         <img src="./assets/BCS_TP_AM.jpg" alt="" class="w-100">
@@ -214,7 +219,18 @@
                         </div>
                     </div>
                     <h2 class="heading4 c-g900 fw-700 mt-1">Marian Cangao</h2>
-                    <p class="">Admin Assistant</p>
+                    <p class="">Operations Assistant</p>
+                </div>
+                <div class="col-md-4 my-4 px-2 px-lg-4 text-center">
+                    <div class="pic">
+                        <img src="./assets/BCS_TP_Kata.jpg" alt="" class="w-100">
+                        <div class="overlay p-3 d-flex align-items-center" onclick="">
+                            <p>Kata is a woman of compassion and ambition–an animal lover with 9 furry babies, a finance and data enthusiast, and an aspiring Veterinarian! Kata is surely made of sugar and spice as she is a home baker, a car lover, and a travel junkie. 
+                            </p>
+                        </div>
+                    </div>
+                    <h2 class="heading4 c-g900 fw-700 mt-1">Catharine Aira Aquino</h2>
+                    <p class="">Operations Assistant</p>
                 </div>
                 <div class="col-md-4 my-4 px-2 px-lg-4 text-center">
                     <div class="pic">
@@ -225,6 +241,16 @@
                     </div>
                     <h2 class="heading4 c-g900 fw-700 mt-1">Yrra Escobar</h2>
                     <p class="">Account Specialist</p>
+                </div>
+                <div class="col-md-4 my-4 px-2 px-lg-4 text-center">
+                    <div class="pic">
+                        <img src="./assets/BCS_TP_Joshua.jpg" alt="" class="w-100">
+                        <div class="overlay p-3 d-flex align-items-center" onclick="">
+                            <p>Joshua believes the key to serve and empower communities is good design and technology. Just as how the internet was instrumental for discovering, supporting, and connecting with other artists. To materialize these dreams, he doesn't skip breakfast. </p>
+                        </div>
+                    </div>
+                    <h2 class="heading4 c-g900 fw-700 mt-1">Joshua Salazar</h2>
+                    <p class="">Front-End Developer</p>
                 </div>
                 <div class="col-md-4 my-4 px-2 px-lg-4 text-center">
                     <div class="pic">
@@ -249,15 +275,28 @@
                 </div>
                 <div class="col-md-4 my-4 px-2 px-lg-4 text-center">
                     <div class="pic">
-                        <img src="./assets/BCS_TP_Kata.jpg" alt="" class="w-100">
+                        <img src="./assets/BCS_TP_Lia.jpg" alt="" class="w-100">
                         <div class="overlay p-3 d-flex align-items-center" onclick="">
-                            <p>Kata is a woman of compassion and ambition–an animal lover with 9 furry babies, a finance and data enthusiast, and an aspiring Veterinarian! Kata is surely made of sugar and spice as she is a home baker, a car lover, and a travel junkie. 
-                            </p>
+                            <p>For most days of the week, Lia is the first to arrive and the last to leave the studio. She is very task-oriented and adaptable to work with. Although she likes to challenge norms, she can't help but subscribe to the K-drama and J-pop mania. </p>
                         </div>
                     </div>
-                    <h2 class="heading4 c-g900 fw-700 mt-1">Catharine Aira Aquino</h2>
-                    <p class="">Operations Assistant</p>
+                    <h2 class="heading4 c-g900 fw-700 mt-1">Lia Silot</h2>
+                    <p class="">Admin Officer</p>
                 </div>
+
+                <div class="col-md-4 my-4 px-2 px-lg-4 text-center">
+                    <div class="pic">
+                        <img src="./assets/BCS_TP_Ey.jpg" alt="" class="w-100">
+                        <div class="overlay p-3 d-flex align-items-center" onclick="">
+                            <p>Despite beer consumption, an insatiable appetite, and a previous pregnancy, Ey still has her beauty pageant figure. She got her office nickname “Inday” for a convincing impersonation of a household nanny. Past her resting bitch face is a warm and free-spirited lass.</p>
+                        </div>
+                    </div>
+                    <h2 class="heading4 c-g900 fw-700 mt-1">Ey Almadovar</h2>
+                    <p class="">Admin Assistant</p>
+                </div>
+               
+                
+                
                 <!-- <div class="col-md-4 my-4 px-2 px-lg-4 text-center">
                     <div class="pic">
                         <img src="./assets/BCS_TP_Marian.jpg" alt="" class="w-100">
@@ -335,8 +374,10 @@
                 <div class="col-md-7">
                     <h2 class="heading2"><span class="subhead">Don't be shy</span>Let us be your secret weapon.</h2>
                     <p class="my-3">Feed our curiosity, collaborate with us, let’s transform concepts.</p>
-                    <a href="mailto:hello@blinkcreativestudio.com" class="button-slanted white-btn"><span>Zoom or
-                            Coffee Date?</span></a>
+
+                    <button class="button-slanted white-btn open-modal-button" id="book-now-btn-footer"><span>Book an Appointment Now</span></button>
+                    <!-- <a href="mailto:hello@blinkcreativestudio.com" class="button-slanted white-btn"><span>Zoom or
+                            Coffee Date?</span></a> -->
                 </div>
 
                 <div class="col-md-4 offset-md-1 pt-64 pt-md-0">
