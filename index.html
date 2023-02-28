@@ -49,18 +49,42 @@
     <div class="modal-container">
         <i class="fa fa-close close-modal-button"></i>
         <div class="modal">
-            <h1>Choose a package</h1>
-            <div class="package-container">
-                <div class="select-tag-container">
-                    <select name="package" class="dropdown-menu minimal" id="package">
-                        <option value="Studio Package">Studio Package</option>
-                        <option value="Graduation Package">Graduation Package</option>
-                        <option value="UP Graduation Package">UP Graduation Package</option>
-                    </select>
-                    <i class="fa fa-angle-down"></i>
-                </div> 
-                <button class="button-slanted modal-button open-calendly-modal" id="modal-next-btn"><span>Next</span></button>
+            <h1>Choose a <span style="color:#a30a27">package</span></h1>
+            <div class="modal-content">
+                <div class="package-container">
+                    <div class="package-label-container">
+                        <span class="package-label">Package</span>
+                    </div>
+                    <div class="select-tag-container">
+                        <select name="package" class="dropdown-menu minimal" id="package" aria-label="package">
+                            <option value="" disabled selected hidden>--</option>
+                            <option value="Studio Package">Studio Package</option>
+                            <option value="Graduation Package">Graduation Package</option>
+                            <option value="UP Graduation Package">UP Graduation Package</option>
+                        </select>
+                        <i class="fa fa-angle-down"></i>
+                    </div> 
+                </div>
+    
+                <div class="package-container">
+                    <div class="package-label-container">
+                        <span class="package-label">Sub-package</span>
+                    </div>
+                    <div class="select-tag-container">
+                        <select name="sub-package" class="dropdown-menu minimal" id="sub-package" aria-label="sub-package">
+                            <option value="" disabled selected hidden>--</option>
+                            <option value="Basic A">Basic A</option>
+                            <option value="Basic B">Basic B</option>
+                            <option value="Standard">Standard</option>
+                            <option value="Deluxe">Deluxe</option>
+                            <option value="Premium">Premium</option>
+                        </select>
+                        <i class="fa fa-angle-down"></i>
+                    </div> 
+                </div>
             </div>
+
+            <button class="button-slanted modal-button open-calendly-modal disabled" id="modal-next-btn"><span>Choose a date</span></button>
         </div>
     </div>
     <!-- End Modal -->
@@ -92,8 +116,11 @@
                 <li><a class="menu" href="/works">Works</a></li>
                 <li><a class="menu" href="/studio">Studio</a></li>
                 <li><a class="menu" id="menu-contact" href="#contact">Contact</a></li>
+                <a class="menu" id="menu-contact" href="/appointments">
+                    <button class="button-slanted modal-button nav-button" id="book-now-btn"><span>Book Now</span></button>
+                </a>
 
-                <button class="button-slanted modal-button nav-button open-modal-button" id="book-now-btn"><span>Book Now</span></button>
+                <!-- <button class="button-slanted modal-button nav-button open-modal-button" id="book-now-btn"><span>Book Now</span></button> -->
 
                 <li class="pt-5 hide-desktop"><span class="menu-span">Get in touch</span></li>
                 <li class="hide-desktop"><a class="menu-contact underline-100"
@@ -101,6 +128,7 @@
             </ul>
         </div>
     </nav>
+    <!-- End nav  -->
 
     <header>
         <section class="py-header">
@@ -419,7 +447,11 @@
                         <span>Book an Appointment</span>
                     </a> -->
 
-                    <button class="button-slanted white-btn open-modal-button" id="book-now-btn-footer"><span>Book an Appointment Now</span></button>
+                    <a href="/appointments">
+                        <button class="button-slanted white-btn open-modal-button" id="book-now-btn-footer">
+                            <span>Book an Appointment Now</span>
+                        </button>
+                    </a>
                 </div>
 
                 <div class="col-md-4 offset-md-1 pt-64 pt-md-0">
@@ -522,7 +554,7 @@
     <!-- JQUERY -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
     <!-- MAIN -->
-    <script src="/js/main.js"></script>
+    <script src="/js/main.js" type="module"></script>
 </body>
 
 </html>
