@@ -6,7 +6,7 @@
             "package" : "studio-rental",
             "name" : "Studio Rental",
             "price" : "699.00 / hr",
-            "desc" : "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+            "desc" : "",
             "desc2" : "Downpayment should not exceed more than 2 days after booking.",
             "inclusions" : [
                 "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta aliquam at delectus.",

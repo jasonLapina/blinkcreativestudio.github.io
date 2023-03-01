@@ -1341,7 +1341,7 @@ form #mce-error-response a {
 }
 
 .button-slanted.modal-button {
-  padding: 4px 20px;
+  padding: 4px 16px;
 }
 
 .hidden {
@@ -1487,7 +1487,7 @@ form #mce-error-response a {
   align-items: start;
   justify-content: space-between;
   opacity: 0;
-  min-height: 540px;
+  min-height: 600px;
   transition: all 0.5s ease-in-out;
 }
 
