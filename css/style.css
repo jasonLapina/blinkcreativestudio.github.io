@@ -557,6 +557,7 @@ a.button-slanted.stroke-btn {
   .navbar-list {
     z-index: 9;
     list-style-type: none;
+    padding: 2px 0;
   }
   .navbar-list .nav-bar-list {
     margin-bottom: 0 !important;
@@ -564,7 +565,7 @@ a.button-slanted.stroke-btn {
   .navbar-list li {
     margin: auto;
     min-width: 80px;
-    padding: 20px 28px 20px 28px;
+    padding: 18px 28px 18px 28px;
     font-size: 14px;
   }
   .navbar-list li.active {
@@ -1319,7 +1320,8 @@ form #mce-error-response a {
   background-color: #FFF;
   position: absolute;
   box-sixing: border-box;
-  max-width: 600px;
+  height: 100vh;
+  width: 100vw;
 }
 
 .sign-up-header-container {
@@ -1332,7 +1334,7 @@ form #mce-error-response a {
 }
 
 .fa-close {
-  color: var(--gray-50);
+  color: var(--gray-800);
   opacity: 1;
   position: absolute;
   right: 26px;
@@ -1343,6 +1345,12 @@ form #mce-error-response a {
 }
 
 @media (min-width: 768px) {
+
+  .modal {
+    height: unset;
+    width: unset;
+    max-width: 600px;
+  }
 
   .sign-up-header-container {
     width: unset;
@@ -1366,12 +1374,15 @@ form #mce-error-response a {
 }
 
 #mc_embed_events_signup_scroll {
-  display: flex;
-  flex-wrap: wrap;
+  /* display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center; */
+  width: 85%;
+  margin: auto;
 }
 
-#mc_embed_signup_scroll span, label, h2 {
+#mc_embed_signup_scroll span label h2 {
   text-align: center;
 }
 
@@ -1390,6 +1401,19 @@ form #mce-error-response a {
   flex-direction: column;
   justify-content: center;
   position: relative;
+  margin-top: 8px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 .indicates-required {
@@ -1421,21 +1445,20 @@ div.mce_inline_error {
 }
 
 #mc-embedded-events-subscribe {
-  background-color: var(--primary-color);
-  border-radius: 8px;
+  background-color: transparent;
   color: var(--white);
   font-family: "Geometric 231";
-  font-size: 16px;
-  padding: 4px 24px;
-  border: var(--primary-color) 4px solid;
+  font-size: 1.5rem;
+  border: none;
   transition: all 0.3s ease;
+  padding: 04px 16px;
 }
 
-#mc-embedded-events-subscribe:hover {
-  border: var(--primary-color) 4px solid;
+/* #mc-embedded-events-subscribe:hover {
+  border: none;
   background-color: transparent;
   color: var(--primary-color);
-}
+} */
 
 .clear {
   display: flex;
@@ -1450,12 +1473,11 @@ div.mce_inline_error {
 
   #mc_embed_signup_scroll {
     padding: 0 4px;
-    width: 85%;
   }
 
   #mc-embedded-events-subscribe {
     font-size: 24px;
-    padding: 4px 36px;
+    padding: 4px 28px;
   }
 }
 
@@ -1757,16 +1779,40 @@ div.mce_inline_error {
 .events-cta {
   background-color: var(--primary-color);
   border: none;
-  border-radius: 8px;
+  padding: 4px 28px;
   transition: all 0.5s ease;
+  -webkit-transform: skew(-14deg);
+          transform: skew(-14deg);
 }
 
-.events-cta span {
-  font-family: "Geometric 231";
-  font-size: 1.2rem;
-  color: var(--white);
-  /* text-shadow: -1px 1px var(--orange), -2px 2px var(--yellow); */
+.sign-up-button {
+  background-color: var(--primary-color);
+  border: var(--primary-color) 4px solid;
+  padding: 0px 8px;
+  transition: all 0.5s ease;
+  -webkit-transform: skew(-14deg);
+          transform: skew(-14deg);
   transition: all 0.3s ease;
+}
+
+.sign-up-button:hover {
+  border: var(--primary-color) 4px solid;
+  background-color: transparent;
+  color: var(--primary-color);
+}
+
+.sign-up-button:hover #mc-embedded-events-subscribe {
+  color: var(--primary-color);
+}
+
+.events-cta span, .sign-up-button input {
+  display: block;
+  font-family: "Geometric 231";
+  font-size: 1.8rem;
+  color: var(--white);
+  transition: all 0.3s ease;
+  -webkit-transform: skew(14deg);
+          transform: skew(14deg);
 }
 
 .intro-heading {
@@ -1834,14 +1880,9 @@ div.mce_inline_error {
     margin-top: -172px;
     margin-left: -64px;
   }
-
-  .events-cta {
-    border-radius: 12px;
-  }
   
   .events-cta span {
     font-size: 2rem;
-    text-shadow: -1px 1px var(--orange), -2px 2px var(--yellow);
     transition: all 0.5s ease;
   }
 
@@ -1923,7 +1964,6 @@ div.mce_inline_error {
   }
 
   .events-cta {
-    border-radius: 12px;
     border: solid 4px var(--primary-color);
   }
   
