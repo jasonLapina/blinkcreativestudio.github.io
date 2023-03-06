@@ -171,6 +171,7 @@ $(document).ready(function(){
   // Open Booking Modal for all buttons across website
   for ( const openBtn of document.querySelectorAll('.open-modal-button')) {
     openBtn.addEventListener('click', () => {
+      console.log("Button clicked")
       openModal();
     })
   }
@@ -309,28 +310,3 @@ $('#menu-contact').click(function(){
         prevScroll = $(this).scrollTop();
     });
   })
-
-
-// Showreel Button
-
-const showreelBtn = document.querySelector('#showreel-btn');
-const videoContainer = document.querySelector('.video-container');
-const showReel = document.querySelector('.video-container video')
-const close = document.querySelector('.close');
-
-showreelBtn.addEventListener('click',()=>{
-    videoContainer.classList.add('show');
-    showReel.play();
-})
-
-close.addEventListener('click',()=>{
-    videoContainer.classList.remove('show');
-    showReel.pause();
-})
-
-window.addEventListener('keydown', function (event) {
-  if (event.key === 'Escape') {
-    videoContainer.classList.remove('show');
-    showReel.pause();
-  }
-})
