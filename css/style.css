@@ -1,5 +1,7 @@
 @import url("https://use.typekit.net/fbr2wgc.css");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
 * {
   padding: 0;
   margin: 0;
@@ -36,10 +38,11 @@ body {
   font-size: 15px;
   font-weight: 400;
   line-height: 1.5;
+  overflow-x: hidden;
 }
 
 body.overflow {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 /* Scrollbar Styling */
@@ -508,6 +511,7 @@ a.button-slanted.stroke-btn {
     padding-right: 32px;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
+    align-items: end;
   }
   .navbar ul li {
     padding: 4px 0;
@@ -560,11 +564,11 @@ a.button-slanted.stroke-btn {
   .navbar-list li {
     margin: auto;
     min-width: 80px;
-    padding: 18px 30px 13px 30px;
+    padding: 20px 28px 20px 28px;
     font-size: 14px;
   }
   .navbar-list li.active {
-    border-top: 7px solid var(--primary-color);
+    /* border-top: 7px solid var(--primary-color); */
     border-bottom: 4px solid var(--primary-color);
   }
   .navbar-list li.active a {
@@ -1275,3 +1279,669 @@ form #mce-error-response a {
   background: #BB1A35;
 }
 /*# sourceMappingURL=style.css.map */
+
+/* ----------------------------- Modal Design ----------------------------- */
+
+.modal-container {
+  display: none;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.modal-container.show {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.33);
+  position: fixed;
+  z-index: 1001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+}
+
+.modal-content{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  padding: 0 12px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.modal {
+  padding: 0 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFF;
+  position: absolute;
+  box-sixing: border-box;
+  max-width: 600px;
+}
+
+.sign-up-header-container {
+  width: 300px;
+}
+
+.sign-up-header {
+  width: 100%;
+  height: auto;
+}
+
+.fa-close {
+  color: var(--gray-50);
+  opacity: 1;
+  position: absolute;
+  right: 26px;
+  top: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 5;
+}
+
+@media (min-width: 768px) {
+
+  .sign-up-header-container {
+    width: unset;
+  }
+
+  .modal-content{
+    margin-bottom: 24px;
+  }
+
+  .fa-close {
+    color: var(--gray-50);
+    opacity: 1;
+  }
+}
+
+/* -------------------------------- MAILCHIMP Form Design -------------------------------- */
+
+#mc_embed_event_signup {
+  width: 100%;
+  margin: auto;
+}
+
+#mc_embed_events_signup_scroll {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#mc_embed_signup_scroll span, label, h2 {
+  text-align: center;
+}
+
+.mc-events-field-group label {
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.mc-events-field-group input {
+  background-color: var(--white);
+  border: var(--gray-600) 2px solid;
+}
+
+.mc-events-field-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.indicates-required {
+  font-size: 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: center;
+  margin-bottom: 12px;
+  color: var(--gray-800);
+}
+
+.asterisk {
+  color: #ff0000;
+  margin: 0;
+}
+
+.sign-up-heading {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+form #mce-responses {
+  padding-top: 32px;
+}
+
+div.mce_inline_error {
+  transform: skew(0deg);
+}
+
+#mc-embedded-events-subscribe {
+  background-color: var(--primary-color);
+  border-radius: 8px;
+  color: var(--white);
+  font-family: "Geometric 231";
+  font-size: 16px;
+  padding: 4px 24px;
+  border: var(--primary-color) 4px solid;
+  transition: all 0.3s ease;
+}
+
+#mc-embedded-events-subscribe:hover {
+  border: var(--primary-color) 4px solid;
+  background-color: transparent;
+  color: var(--primary-color);
+}
+
+.clear {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+
+  .mc-events-field-group {
+    margin-top: 8px;
+  }
+
+  #mc_embed_signup_scroll {
+    padding: 0 4px;
+    width: 85%;
+  }
+
+  #mc-embedded-events-subscribe {
+    font-size: 24px;
+    padding: 4px 36px;
+  }
+}
+
+/* -------------------------- END MAILCHIMP FORM DESIGN ------------------------------ */
+
+/* -------------------------- START THANK YOU MODAL DESIGN -------------------------- */
+
+#thank-you-modal-heading {
+  font-family: "Geometric 231";
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  text-shadow: -1px 1px var(--yellow), -2px 2px var(--orange);
+}
+
+#thank-you-modal-text {
+  margin-bottom: 32px;
+  font-weight: 600;
+  padding:  0 24px;
+}
+
+@media (min-width: 768px) {
+
+  #thank-you-modal-heading {
+    font-size: 4rem;
+  }
+
+  #thank-you-modal-text {
+    font-size: 16px;
+  }
+}
+
+/* -------------------------- END THANK YOU MODAL DESIGN  -------------------------- */
+
+.select-tag {
+  margin: 4px 20px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-radius: 0px;
+  font-size: 16px;
+  width: 90%;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.select-tag:focus {
+  -webkit-outline: none;
+  outline: none
+}
+
+.button-slanted.modal-button {
+  padding: 4px 16px;
+}
+
+.hidden {
+  display: none;
+}
+
+.button-slanted.nav-button {
+  margin: 12px;
+  font-size: 12px;
+  margin-right: 0px;
+  margin-left: 20px;
+}
+
+@media (max-width: 767px) {
+  .button-slanted.nav-button {
+    font-size: 16px;
+    width: fit-content;
+  }
+}
+
+.package-container {
+  display: flex;
+  width: 400px;
+}
+
+.package-label-container {
+  white-space: nowrap;
+  -webkit-transform: skew(-20deg);
+          transform: skew(-20deg);
+  background-color: #f2f2f2;
+  color: #808080;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 20px;
+  font-size: 16px;
+}
+
+.package-label{
+  -webkit-transform: skew(20deg);
+          transform: skew(20deg);
+  text-transform: uppercase;
+}
+
+.select-tag-container {
+  -webkit-transform: skew(-20deg);
+          transform: skew(-20deg);
+  border: 1px #f2f2f2 solid;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#package, #sub-package {
+  -webkit-transform: skew(20deg);
+          transform: skew(20deg);
+  -moz-appearance: none; /* Firefox */
+  -webkit-appearance: none; /* Safari and Chrome */
+  appearance: none;
+}
+
+.fa-angle-down {
+  -webkit-transform: skew(20deg);
+          transform: skew(20deg);
+  margin-right: 16px;
+  position: absolute;
+  right: 0px;
+  z-index: 1;
+}
+
+.disabled {
+  background-color: #808080;
+  border: 3px #808080 solid;
+
+}
+
+.disabled:hover, .disabled:focus {
+  background-color: #808080;
+  border: 3px #808080 solid;
+}
+
+.disabled:hover > span, .disabled:focus > span {
+  color: #f2f2f2;
+}
+
+
+/* APPONTMENTS PAGE */
+
+.accordion-item {
+  transition: all 0.5s ease-in-out;
+  margin: 4px 0px;
+}
+
+.accordion-header {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--gray-900);
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.accordion-header span {
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.accordion-body {
+  margin-left: 32px;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+
+.accordion-body.active {
+  max-height: 20rem;
+  padding: 1rem 0;
+}
+
+.package-item {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: var(--gray-900);
+  cursor: pointer;
+}
+
+.package-item:hover {
+  color: var(--primary-color);
+}
+
+.package-details {
+  display: none;
+  background-color: var(--gray-50);
+  padding: 36px;
+  text-align: left;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  opacity: 0;
+  min-height: 600px;
+  transition: all 0.5s ease-in-out;
+}
+
+.package-details.show {
+  opacity: 1;
+  display: flex;
+  transition: all 0.5s ease-in-out;
+}
+
+.package-section {
+  margin-bottom: 36px;
+}
+
+.price, .package-price{
+  color: var(--primary-color);
+}
+
+.package-info {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: var(--gray-800);
+}
+
+#product-details-btn {
+  margin-left: 12px;
+}
+
+#package-inclusions-content li{
+  margin-left: 32px;
+}
+
+.package-desc-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* -------------- Events Page -------------- */
+
+@font-face {
+  font-family: "Geometric 231";
+  src: url("/assets/herspective/geometric 231 heavy bt.ttf")
+}
+
+:root {
+  --orange: #ff2400;
+  --yellow: #ffcc00;
+}
+
+.lato {
+  font-family: "Lato" !important;
+}
+
+#events-header {
+  background-image: url("/assets/herspective/Maroon Textured BG.jpg");
+  overflow: hidden;
+}
+
+.main-logo-container {
+  color: var(--white);
+  position: relative;
+}
+
+.main-logo-container img {
+  width: 120%;
+  height: auto;
+  margin-left: -60px;
+  margin-bottom: -8px;
+}
+
+.main-image-container {
+  height: 136px;
+  display: flex;
+  align-items: center;
+}
+
+.main-image-container img {
+  width: 240%;
+  height: auto;
+  margin-top: -172px;
+  margin-left: -60px;
+}
+
+.event-date {
+  font-weight: 600;
+}
+
+.event-date, .event-venue {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.event-details {
+  position: absolute;
+  margin-left: 20%;
+  bottom: 0%;
+}
+
+.events-cta {
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 8px;
+  transition: all 0.5s ease;
+}
+
+.events-cta span {
+  font-family: "Geometric 231";
+  font-size: 1.2rem;
+  color: var(--white);
+  /* text-shadow: -1px 1px var(--orange), -2px 2px var(--yellow); */
+  transition: all 0.3s ease;
+}
+
+.intro-heading {
+  font-family: "Geometric 231";
+  color: var(--primary-color);
+  font-size: 1.6rem;
+}
+
+.intro-body {
+  font-size: 12px;
+  color: var(--gray-900);
+  font-weight: 600;
+  margin: 0 32px;
+}
+
+.intro-body span {
+  color: var(--primary-color);
+  font-weight: 900;
+}
+
+.artist-card-container {
+  /* display: grid;
+  grid-template: auto auto auto / repeat(2, 1fr);
+  gap: 12px; */
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  padding: 0 20px;
+}
+
+#artist-5{
+  grid-column: 1 / 3;
+}
+
+.artist-card-image-container {
+  background-image: url("/assets/herspective/Maroon Textured BG.jpg");
+  overflow: hidden;
+  border-radius: 16px;
+  width: 120px;
+  height: 120px;
+  margin-bottom: 12px;
+}
+
+.artist-name {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.artist-title {
+  text-transform: uppercase;
+  color: var(--orange);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+}
+
+/* -------------------- Tablet Viewport -------------------- */
+@media (min-width: 576px) {
+
+  .main-image-container img {
+    width: 140%;
+    height: auto;
+    margin-top: -172px;
+    margin-left: -64px;
+  }
+
+  .events-cta {
+    border-radius: 12px;
+  }
+  
+  .events-cta span {
+    font-size: 2rem;
+    text-shadow: -1px 1px var(--orange), -2px 2px var(--yellow);
+    transition: all 0.5s ease;
+  }
+
+  .intro-heading {
+    font-size: 2.4rem;
+  }
+
+  .intro-body {
+    font-size: 16px;
+  }
+
+  .artist-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    padding: unset;
+  }
+
+  .artist-card {
+    grid-column: span 2;
+  }
+
+  .artist-card-image-container {
+    border-radius: 20px;
+    width: 140px;
+    height: 140px;
+  }
+
+  #artist-5{
+    grid-column: unset;
+  }
+  
+  #artist-4, #artist-5 {
+    grid-column: span 3;
+  }
+
+  .artist-name {
+    font-size: 16px;
+  }
+
+  .artist-title {
+    font-size: 12px;
+  }
+}
+
+/* -------------------- Small Desktop Viewport -------------------- */
+@media (min-width:992px) {
+  
+  header {
+    padding-top: 84px !important;
+  }
+  
+  .main-image-container img {
+    width: 100%;
+    margin-top: -172px;
+    margin-left: -20px;
+    padding-left: 54px;
+  }
+
+  .main-logo-container img {
+    width: 100%;
+    height: auto;
+    margin-left: 0px;
+    margin-bottom: -8px;
+    padding-right: 54px;
+  }
+
+  .intro-body, .artist-name {
+    font-size: 20px;
+  }
+
+  .artist-title {
+    font-size: 16px;
+  }
+
+  .artist-card-container {
+    gap: 12px;
+  }
+
+  .events-cta {
+    border-radius: 12px;
+    border: solid 4px var(--primary-color);
+  }
+  
+  .events-cta span {
+    font-size: 2.5rem;
+  }
+
+  .events-cta:hover {
+    border: solid 4px var(--primary-color);
+    background-color: transparent;
+  }
+
+  .events-cta:hover span {
+    color: var(--primary-color);
+  }
+
+  .artist-card-image-container {
+    width: 160px;
+    height: 160px;
+  }
+}

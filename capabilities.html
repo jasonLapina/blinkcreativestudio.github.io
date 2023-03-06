@@ -22,6 +22,14 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/dist/aos/aos.css">
 
+     <!-- Font Awesome  -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+     <!-- Calendly link widget begin -->
+     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+     <!-- Calendly link widget end -->
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-196753480-1"></script>
     <script>
@@ -34,33 +42,87 @@
 </head>
 
 <body>
-    <nav class="navbar" data-aos="fade-in" data-aos-delay="50"> 
+     <!-- Start Modal -->
+    <!-- <div class="modal-container">
+        <i class="fa fa-close close-modal-button"></i>
+        <div class="modal">
+            <h1>Choose a <span style="color:#a30a27">package</span></h1>
+            <div class="modal-content">
+                <div class="package-container">
+                    <div class="package-label-container">
+                        <span class="package-label">Package</span>
+                    </div>
+                    <div class="select-tag-container">
+                        <select name="package" class="dropdown-menu minimal" id="package" aria-label="package">
+                            <option value="Studio Package">Studio Package</option>
+                            <option value="Graduation Package">Graduation Package</option>
+                            <option value="UP Graduation Package">UP Graduation Package</option>
+                        </select>
+                        <i class="fa fa-angle-down"></i>
+                    </div> 
+                </div>
+    
+                <div class="package-container">
+                    <div class="package-label-container">
+                        <span class="package-label">Sub-package</span>
+                    </div>
+                    <div class="select-tag-container">
+                        <select name="sub-package" class="dropdown-menu minimal" id="sub-package" aria-label="sub-package">
+                            <option value="Basic A">Basic A</option>
+                            <option value="Basic B">Basic B</option>
+                            <option value="Standard">Standard</option>
+                            <option value="Deluxe">Deluxe</option>
+                            <option value="Premium">Premium</option>
+                        </select>
+                        <i class="fa fa-angle-down"></i>
+                    </div> 
+                </div>
+            </div>
+
+            <button class="button-slanted modal-button open-calendly-modal" id="modal-next-btn"><span>Choose a date</span></button>
+        </div>
+    </div> -->
+    <!-- End Modal -->
+    
+    <!-- Start Nav -->
+    <nav class="navbar" data-aos="fade-in" data-aos-delay="50">
         <div class="container d-flex justify-content-between align-items-center">
             <a href="/" class="logo" aria-label="Go to homepage.">
                 <svg width="27" height="36" viewBox="0 0 27 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5.24904 34.5529L0 36V7.35392L5.24904 5.90681V34.5529Z" fill="#A30A24"/>
-                    <path d="M13.1155 11.294V9.74164L26.7183 5.9989V0L7.07715 5.4069V18.9505L26.7183 13.5502V7.55125L13.1155 11.294Z" fill="#A30A24"/>
-                    <path d="M20.6799 24.3113V22.759L7.07715 26.5017V20.5028L26.7183 15.0959V28.6461L7.07715 34.053V28.0541L20.6799 24.3113Z" fill="#A30A24"/>
-                    </svg>                                 
+                    <path d="M5.24904 34.5529L0 36V7.35392L5.24904 5.90681V34.5529Z" fill="#A30A24" />
+                    <path
+                        d="M13.1155 11.294V9.74164L26.7183 5.9989V0L7.07715 5.4069V18.9505L26.7183 13.5502V7.55125L13.1155 11.294Z"
+                        fill="#A30A24" />
+                    <path
+                        d="M20.6799 24.3113V22.759L7.07715 26.5017V20.5028L26.7183 15.0959V28.6461L7.07715 34.053V28.0541L20.6799 24.3113Z"
+                        fill="#A30A24" />
+                </svg>
             </a>
-    
-            <button id="burger" aria-label="Toggle Menu." aria-pressed="false" aria-controls="nav-list" aria-expanded="false">
+
+            <button id="burger" aria-label="Toggle Menu." aria-pressed="false" aria-controls="nav-list"
+                aria-expanded="false">
                 <span></span><span></span><span></span>
             </button>
-        
+
             <ul id="navbar-list" class="navbar-list d-flex" aria-hidden="true">
                 <li class="hide-desktop"><span class="menu-span">Menu</span></li>
                 <li><a class="menu" href="/">Home</a></li>
                 <li class="active"><a class="menu" href="/capabilities">Capabilities</a></li>
                 <li><a class="menu" href="/works">Works</a></li>
                 <li><a class="menu" href="/studio">Studio</a></li>
+                <!-- <li><a class="menu" href="/events">Events</a></li> -->
                 <li><a class="menu" id="menu-contact" href="#contact">Contact</a></li>
-                <li class="pt-5 hide-desktop"><span class="menu-span">Get in touch</span></li>
-                <li class="hide-desktop"><a class="menu-contact underline-100" href="mailto:inquiries@blinkcreativestudio.com">inquiries@blinkcreativestudio.com</a></li>
-            </ul>   
-        </div>        
-    </nav>
+                <!-- <a class="menu" id="menu-contact" href="/appointments">
+                    <button class="button-slanted modal-button nav-button" id="book-now-btn"><span>Book Now</span></button>
+                </a> -->
 
+                <li class="pt-5 hide-desktop"><span class="menu-span">Get in touch</span></li>
+                <li class="hide-desktop"><a class="menu-contact underline-100"
+                        href="mailto:hello@blinkcreativestudio.com">hello@blinkcreativestudio.com</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- End nav  -->
 
     <header class="py-header pb-3 overflow-hidden" data-aos="fade-in">
         <div class="container text-start text-md-center">
@@ -243,17 +305,19 @@
                 <div class="col-md-7">
                     <h2 class="heading2"><span class="subhead">Don't be shy</span>Let us be your secret weapon.</h2>
                     <p class="my-3">Feed our curiosity, collaborate with us, let’s transform concepts.</p>
-                    <a href="mailto:inquiries@blinkcreativestudio.com" class="button-slanted white-btn"><span>Zoom or
+                    <a href="mailto:hello@blinkcreativestudio.com" class="button-slanted white-btn"><span>Zoom or
                             Coffee Date?</span></a>
+
+                    <!-- <button class="button-slanted white-btn open-modal-button" id="book-now-btn-footer"><span>Book an Appointment Now</span></button> -->
                 </div>
 
                 <div class="col-md-4 offset-md-1 pt-64 pt-md-0">
                     <h3 class="underline-80">Say Hello</h3>
                     <div class="mt-2">
-                        <a href="mailto:inquiries@blinkcreativestudio.com"
-                            class="small-text mt-1">inquiries@blinkcreativestudio.com</a>
+                        <a href="mailto:hello@blinkcreativestudio.com"
+                            class="small-text mt-1">hello@blinkcreativestudio.com</a>
                         <a href="tel:0949-993-7469" class="small-text mt-1">0949-993-7469</a>
-                        <a href="tel:0915-377-1777" class="small-text mt-1">0915-377-1777</a>
+                        <a href="tel:049-501-6681" class="small-text mt-1">(049)-501-6681</a>
                     </div>
                 </div>
 
@@ -329,7 +393,7 @@
                                 
                         </a>
                         
-                        <a href="mailto:inquiries@blinkcreativestudio.com" target="_blank" aria-label="Email us.">
+                        <a href="mailto:hello@blinkcreativestudio.com" target="_blank" aria-label="Email us.">
                             <svg class="stroke-primary" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="#808080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 <path d="M22 6L12 13L2 6" stroke="#808080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -347,7 +411,7 @@
     <!-- JQUERY -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
     <!-- MAIN -->
-    <script src="/js/main.js"></script>
+    <script src="/js/main.js" type="module"></script>
 </body>
 </body>
 

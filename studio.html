@@ -22,6 +22,14 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/dist/aos/aos.css">
 
+     <!-- Font Awesome  -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+     <!-- Calendly link widget begin -->
+     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+     <!-- Calendly link widget end -->
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-196753480-1"></script>
     <script>
@@ -34,6 +42,27 @@
 </head>
 
 <body>
+    <!-- Start Modal -->
+    <div class="modal-container">
+        <i class="fa fa-close close-modal-button"></i>
+        <div class="modal">
+            <h1>Choose a package</h1>
+            <div class="package-container">
+                <div class="select-tag-container">
+                    <select name="package" class="dropdown-menu minimal" id="package">
+                        <option value="Studio Package">Studio Package</option>
+                        <option value="Graduation Package">Graduation Package</option>
+                        <option value="UP Graduation Package">UP Graduation Package</option>
+                    </select>
+                    <i class="fa fa-angle-down"></i>
+                </div> 
+                <button class="button-slanted modal-button open-calendly-modal" id="modal-next-btn"><span>Next</span></button>
+            </div>
+        </div>
+    </div>
+    <!-- End Modal -->
+
+    <!-- Start Nav  -->
     <nav class="navbar" data-aos="fade-in" data-aos-delay="50"> 
         <div class="container d-flex justify-content-between align-items-center">
             <a href="/" class="logo" aria-label="Go to homepage.">
@@ -54,12 +83,19 @@
                 <li><a class="menu" href="/capabilities">Capabilities</a></li>
                 <li><a class="menu" href="/works">Works</a></li>
                 <li class="active"><a class="menu" href="/studio">Studio</a></li>
+                <!-- <li><a class="menu" href="/events">Events</a></li> -->
                 <li><a class="menu" id="menu-contact" href="#contact">Contact</a></li>
+
+                <!-- <a class="menu" id="menu-contact" href="/appointments">
+                    <button class="button-slanted modal-button nav-button" id="book-now-btn"><span>Book Now</span></button>
+                </a> -->
+                
                 <li class="pt-5 hide-desktop"><span class="menu-span">Get in touch</span></li>
-                <li class="hide-desktop"><a class="menu-contact underline-100" href="mailto:inquiries@blinkcreativestudio.com">inquiries@blinkcreativestudio.com</a></li>
+                <li class="hide-desktop"><a class="menu-contact underline-100" href="mailto:hello@blinkcreativestudio.com">hello@blinkcreativestudio.com</a></li>
             </ul>   
         </div>        
     </nav>
+    <!-- End Nav  -->
 
     <section class="about py-header overflow-hidden" data-aos="fade-in">
         <div class="container">
@@ -110,7 +146,7 @@
                         </div>
                     </div>
                     <h2 class="heading4 c-g900 fw-700 mt-1">Likas Aspiras</h2>
-                    <p class="">Managing Director</p>
+                    <p class="">Founder/CEO</p>
                 </div>
             </div>
             <div class="row">
@@ -122,8 +158,9 @@
                         </div>
                     </div>
                     <h2 class="heading4 c-g900 fw-700 mt-1">Debbie Melgarejo</h2>
-                    <p class="">Digital Marketing Manager</p>
+                    <p class="">Creative Director</p>
                 </div>
+
                 <div class="col-md-4 my-4 px-2 px-lg-4 text-center">
                     <div class="pic">
                         <img src="./assets/BCS_TP_JM.jpg" alt="" class="w-100">
@@ -132,7 +169,82 @@
                         </div>
                     </div>
                     <h2 class="heading4 c-g900 fw-700 mt-1">JM Gift</h2>
-                    <p class="">Content Production Specialist</p>
+                    <p class="">Operations Manager</p>
+                </div>
+
+                <div class="col-md-4 my-4 px-2 px-lg-4 text-center">
+                    <div class="pic">
+                        <img src="./assets/BCS_TP_Utes.jpg" alt="" class="w-100">
+                        <div class="overlay p-3 d-flex align-items-center" onclick="">
+                            <p>A self-proclaimed rapper and an avid siomai-lover; Utes is Blink Creative Studio’s comedian show-stopper. With humor so dark that it makes our sighs the deepest, we always wonder why he's our graphic artist.</p>
+                        </div>
+                    </div>
+                    <h2 class="heading4 c-g900 fw-700 mt-1">Utes Salazar</h2>
+                    <p class="">Art Director</p>
+                </div>
+                
+                <div class="col-md-4 my-4 px-2 px-lg-4 text-center">
+                    <div class="pic">
+                        <img src="./assets/BCS_TP_Sam.jpg" alt="" class="w-100">
+                        <div class="overlay p-3 d-flex align-items-center" onclick="">
+                            <p>Sam is a “behind the camera” type of guy. He is also our resident tech support and repairman. Whether it's work, family, or relationship, he firmly observes the “ora et labora” (prayer & work) ethic. </p>
+                        </div>
+                    </div>
+                    <h2 class="heading4 c-g900 fw-700 mt-1">Sam Lapie</h2>
+                    <p class="">Video Editor/Animator</p>
+                </div>
+                
+                <div class="col-md-4 my-4 px-2 px-lg-4 text-center">
+                    <div class="pic">
+                        <img src="./assets/BCS_TP_Lyle.jpg" alt="" class="w-100">
+                        <div class="overlay p-3 d-flex align-items-center" onclick="">
+                            <p>Back in high school, Lyle tried Adobe Photoshop CS3 to be a digital illustrator. She wonders how she ended up becoming a graphic designer. She still sketches using  pen and paper but not as often as drinking soda and eating ice cream.</p>
+                        </div>
+                    </div>
+                    <h2 class="heading4 c-g900 fw-700 mt-1">Lyle Belsonda</h2>
+                    <p class="">Graphic Designer</p>
+                </div>
+
+                <div class="col-md-4 my-4 px-2 px-lg-4 text-center">
+                    <div class="pic">
+                       <img src="./assets/BCS_TP_Gio.jpg" alt="" class="w-100">
+                        <div class="overlay p-3 d-flex align-items-center" onclick="">
+                           <p>Gio started as an intern in the studio both to cover the field and discover his niche. He draws portraits, photographs, and graphic design. On top of gaining prowess in visual arts, he is also the bassist of "Happy Ending" band.</p>
+                        </div>
+                    </div>
+                    <h2 class="heading4 c-g900 fw-700 mt-1">Gio Alvarez</h2>
+                    <p class="">Production Assistant</p>
+                </div>
+                <div class="col-md-4 my-4 px-2 px-lg-4 text-center">
+                    <div class="pic">
+                        <img src="./assets/BCS_TP_AM.jpg" alt="" class="w-100">
+                        <div class="overlay p-3 d-flex align-items-center" onclick="">
+                            <p>Marian subscribes to the holy trinity: good food, old music and great company. She also enjoys travelling and watching vlogs. She works and saves up to build her own restobar where people can experience and create wonderful memories.</p>
+                        </div>
+                    </div>
+                    <h2 class="heading4 c-g900 fw-700 mt-1">Marian Cangao</h2>
+                    <p class="">Operations Assistant</p>
+                </div>
+                <div class="col-md-4 my-4 px-2 px-lg-4 text-center">
+                    <div class="pic">
+                        <img src="./assets/BCS_TP_Kata.jpg" alt="" class="w-100">
+                        <div class="overlay p-3 d-flex align-items-center" onclick="">
+                            <p>Kata is a woman of compassion and ambition–an animal lover with 9 furry babies, a finance and data enthusiast, and an aspiring Veterinarian! Kata is surely made of sugar and spice as she is a home baker, a car lover, and a travel junkie. 
+                            </p>
+                        </div>
+                    </div>
+                    <h2 class="heading4 c-g900 fw-700 mt-1">Catharine Aira Aquino</h2>
+                    <p class="">Operations Assistant</p>
+                </div>
+                <div class="col-md-4 my-4 px-2 px-lg-4 text-center">
+                    <div class="pic">
+                        <img src="./assets/BCS_TP_Yrra.jpg" alt="" class="w-100">
+                        <div class="overlay p-3 d-flex align-items-center" onclick="">
+                            <p>Can’t hide and can’t say no to Yrra’s charming persistence. With her dyed hair, impeccable makeup, and fashionable clothing, she unknowingly  inspires others as she expresses herself. To manage such high spirits, she utilizes break time by either sleeping or shopping online. </p>
+                        </div>
+                    </div>
+                    <h2 class="heading4 c-g900 fw-700 mt-1">Yrra Escobar</h2>
+                    <p class="">Account Specialist</p>
                 </div>
                 <div class="col-md-4 my-4 px-2 px-lg-4 text-center">
                     <div class="pic">
@@ -146,35 +258,70 @@
                 </div>
                 <div class="col-md-4 my-4 px-2 px-lg-4 text-center">
                     <div class="pic">
-                        <img src="./assets/BCS_TP_Sam.jpg" alt="" class="w-100">
+                        <img src="./assets/BCS_TP_Ken.jpg" alt="" class="w-100">
                         <div class="overlay p-3 d-flex align-items-center" onclick="">
-                            <p>Sam is a “behind the camera” type of guy. He is also our resident tech support and repairman. Whether it's work, family, or relationship, he firmly observes the “ora et labora” (prayer & work) ethic. </p>
+                            <p>Ken is one of the resident coders in the team. He is a silent worker who is serious and determined to get the job done but outside the studio, Ken is a blasting one-man-band that got all the musical treats for drums, piano, and bass guitar.</p>
                         </div>
                     </div>
-                    <h2 class="heading4 c-g900 fw-700 mt-1">Sam Lapie</h2>
-                    <p class="">Video Editor/Animator</p>
+                    <h2 class="heading4 c-g900 fw-700 mt-1">Ken Nagpala</h2>
+                    <p class="">Front End Developer</p>
                 </div>
                 <div class="col-md-4 my-4 px-2 px-lg-4 text-center">
                     <div class="pic">
-                        <img src="./assets/BCS_TP_Utes.jpg" alt="" class="w-100">
+                        <img src="./assets/BCS_TP_Giles.jpg" alt="" class="w-100">
                         <div class="overlay p-3 d-flex align-items-center" onclick="">
-                            <p>A self-proclaimed rapper and an avid siomai-lover; Utes is Blink Creative Studio’s comedian show-stopper. With humor so dark that it makes our sighs the deepest, we always wonder why he's our graphic artist.</p>
+                            <p>Talking about triple-threat, Giles is the ideal man – musically-inclined, artistic, and athletic. Aside from being a genius programmer, Giles can also create amazing vector artworks. Being wired digitally and always working and playing in front of the screen, Giles likes to bike in the hood, making sure he finds time to move around to live a balanced life off-screen. 
+                            </p>
                         </div>
                     </div>
-                    <h2 class="heading4 c-g900 fw-700 mt-1">Utes Salazar</h2>
-                    <p class="">Graphic Artist</p>
+                    <h2 class="heading4 c-g900 fw-700 mt-1">Giles Labastilla</h2>
+                    <p class="">Front-End Developer</p>
                 </div>
                 <div class="col-md-4 my-4 px-2 px-lg-4 text-center">
                     <div class="pic">
-                        <img src="./assets/BCS_TP_Lyle.jpg" alt="" class="w-100">
+                        <img src="./assets/BCS_TP_Lia.jpg" alt="" class="w-100">
                         <div class="overlay p-3 d-flex align-items-center" onclick="">
-                            <p>Back in high school, Lyle tried Adobe Photoshop CS3 to be a digital illustrator. She wonders how she ended up becoming a graphic designer. She still sketches using  pen and paper but not as often as drinking soda and eating ice cream.</p>
+                            <p>For most days of the week, Lia is the first to arrive and the last to leave the studio. She is very task-oriented and adaptable to work with. Although she likes to challenge norms, she can't help but subscribe to the K-drama and J-pop mania. </p>
                         </div>
                     </div>
-                    <h2 class="heading4 c-g900 fw-700 mt-1">Lyle Belsonda</h2>
-                    <p class="">Graphic Designer</p>
+                    <h2 class="heading4 c-g900 fw-700 mt-1">Lia Silot</h2>
+                    <p class="">Admin Officer</p>
+                </div>
+
+                <div class="col-md-4 my-4 px-2 px-lg-4 text-center">
+                    <div class="pic">
+                        <img src="./assets/BCS_TP_Ey.jpg" alt="" class="w-100">
+                        <div class="overlay p-3 d-flex align-items-center" onclick="">
+                            <p>Despite beer consumption, an insatiable appetite, and a previous pregnancy, Ey still has her beauty pageant figure. She got her office nickname “Inday” for a convincing impersonation of a household nanny. Past her resting bitch face is a warm and free-spirited lass.</p>
+                        </div>
+                    </div>
+                    <h2 class="heading4 c-g900 fw-700 mt-1">Ey Almadovar</h2>
+                    <p class="">Admin Assistant</p>
+                </div>
+               
+                
+                
+                <!-- <div class="col-md-4 my-4 px-2 px-lg-4 text-center">
+                    <div class="pic">
+                        <img src="./assets/BCS_TP_Marian.jpg" alt="" class="w-100">
+                        <div class="overlay p-3 d-flex align-items-center" onclick="">
+                            <p>Marian subscribes to the holy trinity: good food, old music and great company. She also enjoys travelling and watching vlogs. She works and saves up to build her own restobar where people can experience and create wonderful memories.                             </p>
+                        </div>
+                    </div>
+                    <h2 class="heading4 c-g900 fw-700 mt-1">Marian Cangao</h2>
+                    <p class="">Admin Assistant</p>
                 </div>
                 <div class="col-md-4 my-4 px-2 px-lg-4 text-center">
+                    <div class="pic">
+                        <img src="./assets/BCS_TP_Yrra.jpg" alt="" class="w-100">
+                        <div class="overlay p-3 d-flex align-items-center" onclick="">
+                           <p>Can’t hide and can’t say no to Yrra’s charming persistence. With her dyed hair, impeccable makeup, and fashionable clothing, she unknowingly  inspires others as she expresses herself. To manage such high spirits, she utilizes break time by either sleeping or shopping online. </p>
+                        </div>
+                    </div>
+                    <h2 class="heading4 c-g900 fw-700 mt-1">Yrra Escobar</h2>
+                    <p class="">Accounts Specialist</p>
+                </div> -->
+                <!-- <div class="col-md-4 my-4 px-2 px-lg-4 text-center">
                     <div class="pic">
                         <img src="./assets/BCS_TP_Lia.jpg" alt="" class="w-100">
                         <div class="overlay p-3 d-flex align-items-center" onclick="">
@@ -198,13 +345,12 @@
                     <div class="pic">
                        <img src="./assets/BCS_TP_Gio.jpg" alt="" class="w-100">
                         <div class="overlay p-3 d-flex align-items-center" onclick="">
-                            <a href="streaming.html"><p>Gio started as an intern in the studio both to cover the field and discover his niche. He draws portraits, photographs, and graphic design. On top of gaining prowess in visual arts, he is also the bassist of "Happy Ending" band.</p></a>
+                           <p>Gio started as an intern in the studio both to cover the field and discover his niche. He draws portraits, photographs, and graphic design. On top of gaining prowess in visual arts, he is also the bassist of "Happy Ending" band.</p>
                         </div>
                     </div>
                     <h2 class="heading4 c-g900 fw-700 mt-1">Gio Alvarez</h2>
                     <p class="">Production Assistant</p>
-                </div>
-
+                </div> -->
             </div>
         </div>
     </section>
@@ -232,17 +378,20 @@
                 <div class="col-md-7">
                     <h2 class="heading2"><span class="subhead">Don't be shy</span>Let us be your secret weapon.</h2>
                     <p class="my-3">Feed our curiosity, collaborate with us, let’s transform concepts.</p>
-                    <a href="mailto:inquiries@blinkcreativestudio.com" class="button-slanted white-btn"><span>Zoom or
+
+                    <!-- <button class="button-slanted white-btn open-modal-button" id="book-now-btn-footer"><span>Book an Appointment Now</span></button> -->
+
+                    <a href="mailto:hello@blinkcreativestudio.com" class="button-slanted white-btn"><span>Zoom or
                             Coffee Date?</span></a>
                 </div>
 
                 <div class="col-md-4 offset-md-1 pt-64 pt-md-0">
                     <h3 class="underline-80">Say Hello</h3>
                     <div class="mt-2">
-                        <a href="mailto:inquiries@blinkcreativestudio.com"
-                            class="small-text mt-1">inquiries@blinkcreativestudio.com</a>
+                        <a href="mailto:hello@blinkcreativestudio.com"
+                            class="small-text mt-1">hello@blinkcreativestudio.com</a>
                         <a href="tel:0949-993-7469" class="small-text mt-1">0949-993-7469</a>
-                        <a href="tel:0915-377-1777" class="small-text mt-1">0915-377-1777</a>
+                        <a href="tel:049-501-6681" class="small-text mt-1">(049)-501-6681</a>
                     </div>
                 </div>
 
@@ -318,7 +467,7 @@
                                 
                         </a>
                         
-                        <a href="mailto:inquiries@blinkcreativestudio.com" target="_blank" aria-label="Email us.">
+                        <a href="mailto:hello@blinkcreativestudio.com" target="_blank" aria-label="Email us.">
                             <svg class="stroke-primary" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="#808080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 <path d="M22 6L12 13L2 6" stroke="#808080" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -336,7 +485,7 @@
     <!-- JQUERY -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
     <!-- MAIN -->
-    <script src="/js/main.js"></script>
+    <script src="/js/main.js" type="module"></script>
 </body>
 
 </html>
