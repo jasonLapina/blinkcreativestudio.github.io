@@ -7,11 +7,11 @@
 
     <title>Blink Creative Studio | Multimedia Company</title>
 
-    <meta name="description"
-        content="Blink Creative Studio is a multimedia company in Laguna, Philippines. We convey and connect through campaigns, photos, videos, and strategies.">
+    <!-- <meta name="description"
+        content="Blink Creative Studio is a multimedia company in Laguna, Philippines. We convey and connect through campaigns, photos, videos, and strategies."> -->
 
-    <meta name="description" content="Her+Spective is an art fair">
-    <meta name="keywords" content="Her, Spective, Her+Spective, art, fair">
+    <meta name="description" content="HER+SPECTIVE is an empowering art fair celebrating Women's Month and championing gender equality.">
+    <meta name="keywords" content="Her, Spective, Her+Spective, art, fair, March 25, 2023">
     <meta property="og:title" content="Blink Creative Studio">
     <meta property="og:description"
         content="Blink Creative Studio is a multimedia company in Laguna, Philippines. We convey and connect through campaigns, photos, videos, and strategies.">
@@ -59,7 +59,7 @@
             <div class="modal-content">
                 <!-- Begin Mailchimp Signup Form -->
                 <div id="mc_embed_event_signup">
-                    <form action="https://sanmiguelpetcare.us2.list-manage.com/subscribe/post?u=06e764917e65ca6b2dc6c40b4&amp;id=0797daa16b&amp;f_id=007746e0f0" method="post" id="mc_embed_events_signup_scroll" name="mc-embedded-subscribe-form" class="validate events-form" target="_self">
+                    <form action="https://blinkcreativestudio.us2.list-manage.com/subscribe/post?u=06e764917e65ca6b2dc6c40b4&amp;id=0797daa16b&amp;f_id=007746e0f0" method="post" id="mc_embed_events_signup_scroll" name="mc-embedded-subscribe-form" class="validate events-form" target="_self">
                         <div id="mc_embed_signup_scroll">
                         <h2 class="sign-up-heading lato">Sign-Up Form</h2>
                         <div class="indicates-required"><span class="asterisk">*</span><em> indicates required</em></div>
@@ -125,6 +125,11 @@
     <div class="modal-container thank-you">
         <i class="fa fa-close close-modal-button"></i>
         <div class="modal">
+            <div class="sign-up-header-container">
+                <img src="/assets/herspective/Hespective letterhead 600PX.png" alt="Her+Spective Art Fair Sign Up Header" class="sign-up-header">
+            </div>
+
+            <!-- <h2 class="sign-up-heading lato">Success!</h2> -->
             <h2 class="mb-3" id="thank-you-modal-heading">Success!</h2>
             <div class="modal-content lato" id="thank-you-modal-text">
                 Thank you for registering for the HER+SPECTIVE Art Fair as an exhibitor. We have received your registration details and are excited to have you as a participant in this event.
@@ -174,15 +179,11 @@
         </div>
     </nav>
     <!-- End nav  -->
-    <header class="py-header pb-0 overflow-hidden" data-aos="fade-in">
+    <header class="py-header pb-0 overflow-hidden" id="events-header" data-aos="fade-in">
         <div class="text-start text-md-center">
             <div class="row hero-banner">
                 <div class="col-7 col-sm-6 text-start main-logo-container">
                     <img src="/assets/herspective/Herspective_main_logo_withdate.svg" alt="Her+Spective Art Fair">
-                    <!-- <div class="event-details">
-                        <p class="lato event-date">March 25, 2023 | 9AM to 5PM</p>
-                        <p class="lato event-venue">ES Plaza, Los Baños, Laguna</p>
-                    </div> -->
                 </div>
                 <div class="col-5 col-sm-6 main-image-container">
                     <img src="/assets/herspective/KeyVisual.png">
@@ -377,6 +378,7 @@
     <!-- MAIN -->
     <script src="/js/main.js" type="module"></script>
 
+
     <script>
         const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
         const modalContainer = document.querySelector('.modal-container');
@@ -485,7 +487,7 @@
         }
         
         function resetFieldValues() {
-            for (const fieldGroup of document.querySelectorAll(".mc-field-group")) {
+            for (const fieldGroup of document.querySelectorAll(".mc-events-field-group")) {
                 fieldGroup.children[1].value = ""
             }
 

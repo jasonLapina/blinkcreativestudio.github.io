@@ -1427,6 +1427,14 @@ div.mce_inline_error {
   font-family: "Geometric 231";
   font-size: 16px;
   padding: 4px 24px;
+  border: var(--primary-color) 4px solid;
+  transition: all 0.3s ease;
+}
+
+#mc-embedded-events-subscribe:hover {
+  border: var(--primary-color) 4px solid;
+  background-color: transparent;
+  color: var(--primary-color);
 }
 
 .clear {
@@ -1442,7 +1450,7 @@ div.mce_inline_error {
 
   #mc_embed_signup_scroll {
     padding: 0 4px;
-    width: 100%;
+    width: 85%;
   }
 
   #mc-embedded-events-subscribe {
@@ -1456,7 +1464,6 @@ div.mce_inline_error {
 /* -------------------------- START THANK YOU MODAL DESIGN -------------------------- */
 
 #thank-you-modal-heading {
-  margin-top: 32px;
   font-family: "Geometric 231";
   color: var(--primary-color);
   font-size: 2.5rem;
@@ -1702,7 +1709,7 @@ div.mce_inline_error {
   font-family: "Lato" !important;
 }
 
-header {
+#events-header {
   background-image: url("/assets/herspective/Maroon Textured BG.jpg");
   overflow: hidden;
 }
