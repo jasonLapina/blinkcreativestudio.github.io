@@ -1,0 +1,47 @@
+@import url("https://use.typekit.net/fbr2wgc.css");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  --heading-font: "Aileron", sans-serif;
+  --body-font: "Inter", sans-serif;
+  --primary-color: #A30A24;
+  --gray-900: #191919;
+  --gray-800: #808080;
+  --gray-700: #6e6e6e;
+  --gray-600: #e8e8e8;
+  --gray-500: #b3b3b3;
+  --gray-400: #cacaca;
+  --gray-300: #e1e1e1;
+  --gray-200: #eaeaea;
+  --gray-100: #f5f5f5;
+  --gray-75: #fafafa;
+  --gray-50: #f2f2f2;
+  --white: #ffffff;
+}
+
+.video-container {
+    position: fixed;
+    width: 80%;
+    height: 80%;
+    z-index: 999;
+    background-color: var(--gray-900);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    pointer-events: none;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}

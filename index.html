@@ -24,6 +24,14 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/dist/aos/aos.css">
 
+    <!-- Font Awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+    <!-- Calendly link widget begin -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <!-- Calendly link widget end -->
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-196753480-1"></script>
     <script>
@@ -67,6 +75,51 @@
       }(document, 'script', 'facebook-jssdk'));
     </script>
 
+    <!-- Start Modal -->
+    <div class="modal-container">
+        <i class="fa fa-close close-modal-button"></i>
+        <div class="modal">
+            <h1>Choose a <span style="color:#a30a27">package</span></h1>
+            <div class="modal-content">
+                <div class="package-container">
+                    <div class="package-label-container">
+                        <span class="package-label">Package</span>
+                    </div>
+                    <div class="select-tag-container">
+                        <select name="package" class="dropdown-menu minimal" id="package" aria-label="package">
+                            <option value="" disabled selected hidden>--</option>
+                            <option value="Studio Package">Studio Package</option>
+                            <option value="Graduation Package">Graduation Package</option>
+                            <option value="UP Graduation Package">UP Graduation Package</option>
+                        </select>
+                        <i class="fa fa-angle-down"></i>
+                    </div> 
+                </div>
+    
+                <div class="package-container">
+                    <div class="package-label-container">
+                        <span class="package-label">Sub-package</span>
+                    </div>
+                    <div class="select-tag-container">
+                        <select name="sub-package" class="dropdown-menu minimal" id="sub-package" aria-label="sub-package">
+                            <option value="" disabled selected hidden>--</option>
+                            <option value="Basic A">Basic A</option>
+                            <option value="Basic B">Basic B</option>
+                            <option value="Standard">Standard</option>
+                            <option value="Deluxe">Deluxe</option>
+                            <option value="Premium">Premium</option>
+                        </select>
+                        <i class="fa fa-angle-down"></i>
+                    </div> 
+                </div>
+            </div>
+
+            <button class="button-slanted modal-button open-calendly-modal disabled" id="modal-next-btn"><span>Choose a date</span></button>
+        </div>
+    </div>
+    <!-- End Modal -->
+
+    <!-- Start Nav  -->
     <nav class="navbar" data-aos="fade-in" data-aos-delay="50">
         <div class="container d-flex justify-content-between align-items-center">
             <a href="/" class="logo" aria-label="Go to homepage.">
@@ -92,13 +145,21 @@
                 <li><a class="menu" href="/capabilities">Capabilities</a></li>
                 <li><a class="menu" href="/works">Works</a></li>
                 <li><a class="menu" href="/studio">Studio</a></li>
+                <!-- <li><a class="menu" href="/events">Events</a></li> -->
                 <li><a class="menu" id="menu-contact" href="#contact">Contact</a></li>
+                <!-- <a class="menu" id="menu-contact" href="/appointments">
+                    <button class="button-slanted modal-button nav-button" id="book-now-btn"><span>Book Now</span></button>
+                </a> -->
+
+                <!-- <button class="button-slanted modal-button nav-button open-modal-button" id="book-now-btn"><span>Book Now</span></button> -->
+
                 <li class="pt-5 hide-desktop"><span class="menu-span">Get in touch</span></li>
                 <li class="hide-desktop"><a class="menu-contact underline-100"
                         href="mailto:hello@blinkcreativestudio.com">hello@blinkcreativestudio.com</a></li>
             </ul>
         </div>
     </nav>
+    <!-- End nav  -->
 
     <header>
         <section class="py-header">
@@ -111,13 +172,14 @@
                         <h1 class="subhead">Here at <span>Blink</span> Creative Studio</h1>
                         <p class="heading1 word-loop">
                             We convey and connect through
-                            <span class="c-primary">campaigns.</span>
-                            <span class="c-primary">events.</span>
-                            <span class="c-primary">photos.</span>
-                            <span class="c-primary">videos.</span>
+                            <span class="c-primary" id="campaigns">campaigns.</span>
+                            <span class="c-primary" id="events">events.</span>
+                            <span class="c-primary" id="photos">photos.</span>
+                            <span class="c-primary" id="videos">videos.</span>
                         </p>
-                        <div class="btn-header">
-                            <button class="button-slanted my-4" id="showreel-btn"><span>Watch Our Showreel</span></button>
+                        <!-- Add class "button-loop" to class "btn-header" to loop between button  -->
+                        <div class="btn-header">  
+                            <button class="button-slanted my-4 showreel-btn" id="sr-btn"><span id="sr-btn-text">Watch Our Showreel</span></button>
                         </div>
                         <div class="video-container">
                             <span class="close close-cursor"></span>
@@ -412,6 +474,13 @@
                     <p class="my-3">Feed our curiosity, collaborate with us, let’s transform concepts.</p>
                     <a href="mailto:hello@blinkcreativestudio.com" class="button-slanted white-btn"><span>Zoom or
                             Coffee Date?</span></a>
+
+                    <!-- // Link to appointments page -->
+                    <!-- <a href="/appointments">
+                        <button class="button-slanted white-btn open-modal-button" id="book-now-btn-footer">
+                            <span>Book an Appointment Now</span>
+                        </button>
+                    </a> -->
                 </div>
 
                 <div class="col-md-4 offset-md-1 pt-64 pt-md-0">
@@ -514,7 +583,68 @@
     <!-- JQUERY -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
     <!-- MAIN -->
-    <script src="/js/main.js"></script>
+    <script src="/js/main.js" type="module"></script>
+
+    <script>
+        const videoContainer = document.querySelector('.video-container');
+        const showReel = document.querySelector('.video-container video');
+        const srbtn = document.querySelector('#sr-btn');
+        const srbtnText = document.getElementById('sr-btn-text');
+
+        setTimeout(changeShowreelBtnFunc, 3000);
+
+        function changeShowreelBtnFunc() {
+            changeShowreelBtnToEventsBtn();
+            setTimeout(changeEventsBtnToShowreelBtn, 3000);
+            
+            setInterval(() => {
+                changeShowreelBtnToEventsBtn();
+                setTimeout(changeEventsBtnToShowreelBtn, 3000);
+            }, 12000)
+        }
+        
+        function changeShowreelBtnToEventsBtn() {
+            srbtnText.innerText = "Register Now";
+            srbtn.removeEventListener('click', setShowreelBtnFunc);
+            srbtn.addEventListener('click', setEventsBtnFunc);
+        }
+        
+        function changeEventsBtnToShowreelBtn() {
+            srbtnText.innerText = "Watch Our Showreel";
+            srbtn.removeEventListener('click', setEventsBtnFunc);
+            srbtn.addEventListener('click', setShowreelBtnFunc);
+        }
+        
+        function setEventsBtnFunc() {
+            location.href = "/events";
+        }
+        
+        function setShowreelBtnFunc() {
+            videoContainer.classList.add('show');
+            showReel.play();
+        }
+
+        for (var btn of document.querySelectorAll('.showreel-btn')) {
+            btn.addEventListener('click',()=>{
+                videoContainer.classList.add('show');
+                showReel.play();
+            })
+        }
+
+        for (var close of document.querySelectorAll('.close')) {
+            close.addEventListener('click',()=>{
+                videoContainer.classList.remove('show');
+                showReel.pause();
+            })
+        }
+
+        window.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') {
+                videoContainer.classList.remove('show');
+                showReel.pause();
+            }
+        })
+    </script>
 </body>
 
 </html>
