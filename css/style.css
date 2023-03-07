@@ -58,7 +58,6 @@ body.overflow {
 }
 
 ::-webkit-scrollbar-thumb {
-  border-radius: 4px;
   background: var(--gray-800);
   opacity: 0.5;
 }
@@ -1800,7 +1799,7 @@ div.mce_inline_error {
 .events-cta {
   background-color: var(--primary-color);
   border: none;
-  padding: 4px 28px;
+  padding: 2px 24px;
   transition: all 0.5s ease;
   -webkit-transform: skew(-14deg);
           transform: skew(-14deg);
@@ -1829,7 +1828,7 @@ div.mce_inline_error {
 .events-cta span, .sign-up-button input {
   display: block;
   font-family: "Geometric 231";
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   color: var(--white);
   transition: all 0.3s ease;
   -webkit-transform: skew(14deg);
@@ -1890,6 +1889,35 @@ div.mce_inline_error {
   font-size: 10px;
   letter-spacing: 0.2em;
   font-weight: 700;
+}
+
+@media (min-width: 448px) {
+
+  .events-cta {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 4px 28px;
+    transition: all 0.5s ease;
+    -webkit-transform: skew(-14deg);
+            transform: skew(-14deg);
+  }
+
+  .events-cta span, .sign-up-button input {
+    display: block;
+    font-family: "Geometric 231";
+    font-size: 1.8rem;
+    color: var(--white);
+    transition: all 0.3s ease;
+    -webkit-transform: skew(14deg);
+            transform: skew(14deg);
+  }
+}
+
+@media (max-width: 576px) {
+  
+  .main-logo-container {
+    padding: 0;
+  }
 }
 
 /* -------------------- Tablet Viewport -------------------- */
