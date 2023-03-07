@@ -30,7 +30,6 @@
 html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
-  -ms-overflow-style: none;
 }
 
 body {
@@ -43,6 +42,7 @@ body {
   scrollbar-width: none;
   scrollbar-gutter: revert;
   -webkit-overflow-y: overlay;
+  -ms-overflow-style: none;
   overflow-y: overlay;
 }
 
@@ -67,6 +67,18 @@ body.overflow {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--gray-900);
+}
+
+@media (max-width: 768px) {
+  
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
 }
 
 a:focus-visible, button:focus-visible {
