@@ -30,6 +30,7 @@
 html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 body {
@@ -67,13 +68,8 @@ body.overflow {
 }
 
 @media (max-width: 768px) {
-
-  /* ::-webkit-scrollbar {
-    width: 1px;
-  } */
   
   ::-webkit-scrollbar {
-    -webkit-display: none;
     display: none;
     width: 0px;
   }
