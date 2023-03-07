@@ -30,7 +30,6 @@
 html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
-  -ms-overflow-style: none;
 }
 
 body {
@@ -39,10 +38,6 @@ body {
   font-size: 15px;
   font-weight: 400;
   line-height: 1.5;
-  overflow-x: hidden;
-  scrollbar-width: none;
-  scrollbar-gutter: revert;
-  -webkit-overflow-y: overlay;
   overflow-y: overlay;
 }
 
@@ -61,12 +56,26 @@ body.overflow {
 
 ::-webkit-scrollbar-thumb {
   border-radius: 4px;
-  background: var(--gray-300);
+  background: var(--gray-800);
   opacity: 0.5;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--gray-900);
+}
+
+@media (max-width: 768px) {
+  
+  ::-webkit-scrollbar {
+    -webkit-display: none;
+    display: none;
+    width: 0px;
+  }
+
+  body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
 }
 
 a:focus-visible, button:focus-visible {
