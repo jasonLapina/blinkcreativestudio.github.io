@@ -30,6 +30,7 @@
 html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
+  -ms-overflow-style: none;
 }
 
 body {
@@ -39,6 +40,10 @@ body {
   font-weight: 400;
   line-height: 1.5;
   overflow-x: hidden;
+  scrollbar-width: none;
+  scrollbar-gutter: revert;
+  -webkit-overflow-y: overlay;
+  overflow-y: overlay;
 }
 
 body.overflow {
@@ -47,12 +52,17 @@ body.overflow {
 
 /* Scrollbar Styling */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  border-radius: 8px;
-  background: #808080;
+  border-radius: 4px;
+  background: var(--gray-300);
+  opacity: 0.5;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -1098,7 +1108,7 @@ form #mce-error-response a {
 
 .works ::-webkit-scrollbar {
   display: none;
-  width: 8px;
+  width: 4px;
 }
 
 .works .heading4 {
@@ -1319,9 +1329,9 @@ form #mce-error-response a {
   justify-content: center;
   background-color: #FFF;
   position: absolute;
-  box-sixing: border-box;
   height: 100vh;
   width: 100vw;
+  box-sizing: border-box;
 }
 
 .sign-up-header-container {
@@ -1932,7 +1942,7 @@ div.mce_inline_error {
 /* -------------------- Small Desktop Viewport -------------------- */
 @media (min-width:992px) {
   
-  header {
+  #events-header {
     padding-top: 84px !important;
   }
   
@@ -1949,6 +1959,7 @@ div.mce_inline_error {
     margin-left: 0px;
     margin-bottom: -8px;
     padding-right: 54px;
+    overflow-x: visible;
   }
 
   .intro-body, .artist-name {
