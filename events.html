@@ -84,8 +84,8 @@
 
                         <div class="mc-events-field-group lato size1of2">
                             <!-- <label for="mce-PHONE">Contact Number  <span class="asterisk">*</span></label> -->
-                            <input type="number" name="PHONE" class="required" value="" id="mce-PHONE" placeholder="Contact Number*" required>
-                            <span id="mce-PHONE-HELPERTEXT" class="helper_text"></span>
+                            <input type="tel" name="PHONE" class="required" value="" id="mce-PHONE" placeholder="Contact Number (09-- --- ----)*" required>
+                            <span id="mce-PHONE-HELPERTEXT" class="helper_text"></span> 
                             
                         </div>
 
@@ -97,7 +97,7 @@
 
                         <div class="mc-events-field-group lato">
                             <!-- <label for="mce-SOCMED">Social Media Page </label> -->
-                            <input type="text" value="" name="SOCMED" class="" id="mce-SOCMED" placeholder="Social Media Page Link">
+                            <input type="url" value="" name="SOCMED" class="" id="mce-SOCMED" placeholder="Social Media Page Link (http://www.example.com)">
                             <span id="mce-SOCMED-HELPERTEXT" class="helper_text"></span>
                         </div>
 
@@ -419,17 +419,11 @@
         const mcFailedMsg = document.getElementById("mce-error-response");
         const tyModalText = document.getElementById("thank-you-modal-text");
         const tyModalHead = document.getElementById("thank-you-modal-heading");
+        const mcPhone = document.getElementById("mce-PHONE");
 
         const firstFocusableElement = signUpModal.querySelectorAll(focusableElements)[0]; // get first element to be focused inside modal
         const focusableContent = signUpModal.querySelectorAll(focusableElements);
         const lastFocusableElement = focusableContent[focusableContent.length - 1]; // get last element to be focused inside modal
-
-        modalContainer.addEventListener("click", function(event) {
-            // If user either clicks X button OR clicks outside the modal window, then close modal by calling closeModal()
-            if ( event.target.matches(".button-close-modal") || !event.target.closest(".modal")) {
-                closeModal();
-            }
-        }, false)
 
         document.addEventListener('keydown', function(e) {
             let isTabPressed = e.key === 'Tab' || e.keyCode === 9;
@@ -461,6 +455,23 @@
             closeModal();
             closeTYModal();
         });
+        
+        mcPhone.addEventListener('keydown', () => {
+            const formattedInputValue = formatedPhoneNumber(mcPhone.value);
+            mcPhone.value = formattedInputValue;
+        });
+
+        mcPhone.addEventListener('change', () => {
+            const formattedInputValue = formatedPhoneNumber(mcPhone.value);
+            mcPhone.value = formattedInputValue;
+        });
+
+        modalContainer.addEventListener("click", function(event) {
+            // If user either clicks X button OR clicks outside the modal window, then close modal by calling closeModal()
+            if ( event.target.matches(".button-close-modal") || !event.target.closest(".modal")) {
+                closeModal();
+            }
+        }, false)
 
         mcForm.addEventListener('reset', (e) => {
             e.preventDefault();
@@ -473,6 +484,20 @@
                 openTYModal(false);
             }
         })
+
+        function formatedPhoneNumber(value) {
+            if (!value) return value;
+
+            const phoneNumber = value.replace(/[^\d]/g, '');
+            const phoneNumberLength = phoneNumber.length;
+
+            if (phoneNumberLength < 5) return phoneNumber;
+            if (phoneNumberLength < 8) {
+                return `(${phoneNumber.slice(0,4)}) ${phoneNumber.slice(4)}`;
+            }
+            
+            return `(${phoneNumber.slice(0,4)}) ${phoneNumber.slice(4,7)}-${phoneNumber.slice(7,11)}`;
+        }
 
         function openModal() {
             signUpModal.focus();
