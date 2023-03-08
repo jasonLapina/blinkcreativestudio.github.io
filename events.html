@@ -84,7 +84,7 @@
 
                         <div class="mc-events-field-group lato size1of2">
                             <!-- <label for="mce-PHONE">Contact Number  <span class="asterisk">*</span></label> -->
-                            <input type="tel" name="PHONE" class="required" value="" id="mce-PHONE" placeholder="Contact Number (09-- --- ----)*" required>
+                            <input type="tel" name="PHONE" class="required" value="" id="mce-PHONE" placeholder="Contact Number (09-- --- ----)*" maxlength="15" required>
                             <span id="mce-PHONE-HELPERTEXT" class="helper_text"></span> 
                             
                         </div>
@@ -113,7 +113,7 @@
                         
                         <div class="clear">
                             <div class="sign-up-button">
-                                <input type="submit" value="Register" name="subscribe" id="mc-embedded-events-subscribe" class="">
+                                <input type="submit" value="Register" name="subscribe" id="mc-embedded-events-subscribe" class="subscribe button">
                             </div>
                         </div>
                     </div>
@@ -225,47 +225,42 @@
             <h2 class="intro-heading mb-1 mb-lg-3">Featured Artists</h2>
         </div>
         <div class="m-2 m-lg-3 artist-card-container">
-            <div class="artist-card text-center d-flex flex-column align-items-center gap-1 gap-lg-2" id="artist-1">
+            <div class="artist-card text-center d-flex flex-column align-items-center gap-1 gap-lg-2 hidden" id="artist-1">
                 <div class="artist-card-image-container"></div>
                 <h5 class="artist-name lato">Marie Gina Almusal</h5>
                 <p class="artist-title lato">Visual Artist</p>
             </div>
-            <div class="artist-card text-center d-flex flex-column align-items-center gap-1 gap-lg-2" id="artist-2">
+            <div class="artist-card text-center d-flex flex-column align-items-center gap-1 gap-lg-2 hidden" id="artist-2">
                 <div class="artist-card-image-container"></div>
                 <h5 class="artist-name lato">Marie Gina Almusal</h5>
                 <p class="artist-title lato">Visual Artist</p>
             </div>
-            <div class="artist-card text-center d-flex flex-column align-items-center gap-1 gap-lg-2" id="artist-3">
+            <div class="artist-card text-center d-flex flex-column align-items-center gap-1 gap-lg-2 hidden" id="artist-3">
                 <div class="artist-card-image-container"></div>
                 <h5 class="artist-name lato">Marie Gina Almusal</h5>
                 <p class="artist-title lato">Visual Artist</p>
             </div>
-            <div class="artist-card text-center d-flex flex-column align-items-center gap-1 gap-lg-2" id="artist-4">
+            <div class="artist-card text-center d-flex flex-column align-items-center gap-1 gap-lg-2 hidden" id="artist-4">
                 <div class="artist-card-image-container"></div>
                 <h5 class="artist-name lato">Marie Gina Almusal</h5>
                 <p class="artist-title lato">Visual Artist</p>
             </div>
-            <div class="artist-card text-center d-flex flex-column align-items-center gap-1 gap-lg-2" id="artist-5">
+            <div class="artist-card text-center d-flex flex-column align-items-center gap-1 gap-lg-2 hidden" id="artist-5">
                 <div class="artist-card-image-container"></div>
                 <h5 class="artist-name lato">Marie Gina Almusal</h5>
                 <p class="artist-title lato">Visual Artist</p>
             </div>
-            <div class="artist-card text-center d-flex flex-column align-items-center gap-1 gap-lg-2" id="artist-5">
+            <div class="artist-card text-center d-flex flex-column align-items-center gap-1 gap-lg-2 hidden" id="artist-5">
                 <div class="artist-card-image-container"></div>
                 <h5 class="artist-name lato">Marie Gina Almusal</h5>
                 <p class="artist-title lato">Visual Artist</p>
             </div>
-            <div class="artist-card text-center d-flex flex-column align-items-center gap-1 gap-lg-2" id="artist-5">
+            <div class="artist-card text-center d-flex flex-column align-items-center gap-1 gap-lg-2 hidden" id="artist-5">
                 <div class="artist-card-image-container"></div>
                 <h5 class="artist-name lato">Marie Gina Almusal</h5>
                 <p class="artist-title lato">Visual Artist</p>
             </div>
-            <div class="artist-card text-center d-flex flex-column align-items-center gap-1 gap-lg-2" id="artist-5">
-                <div class="artist-card-image-container"></div>
-                <h5 class="artist-name lato">Marie Gina Almusal</h5>
-                <p class="artist-title lato">Visual Artist</p>
-            </div>
-            <div class="artist-card text-center d-flex flex-column align-items-center gap-1 gap-lg-2" id="artist-5">
+            <div class="artist-card text-center d-flex flex-column align-items-center gap-1 gap-lg-2 hidden" id="artist-5">
                 <div class="artist-card-image-container"></div>
                 <h5 class="artist-name lato">Marie Gina Almusal</h5>
                 <p class="artist-title lato">Visual Artist</p>
@@ -414,6 +409,7 @@
         const signUpModal = document.querySelector('#sign-up-modal');
         const tyModal = document.querySelector('.thank-you');
         const body = document.querySelector('body');
+        const html = document.querySelector('html');
         const mcForm = document.getElementById("mc-embedded-subscribe-form");
         const mcSuccessMsg = document.getElementById("mce-success-response");
         const mcFailedMsg = document.getElementById("mce-error-response");
@@ -507,7 +503,9 @@
 
             if(!modalContainer.classList.contains('show')) {
                 body.style.overflowY = 'auto';
+                html.style.overflowY = 'auto';
             } else {
+                html.style.overflowY = 'hidden';
                 body.style.overflowY = 'hidden';
                 body.setAttribute('aria-hidden', 'true');
             }
@@ -527,8 +525,10 @@
             }
 
             if(!tyModal.classList.contains('show')) {
+                html.style.overflowY = 'auto';
                 body.style.overflowY = 'auto';
             } else {
+                html.style.overflowY = 'hidden';
                 body.style.overflowY = 'hidden';
                 body.setAttribute('aria-hidden', 'true');
             }
@@ -540,6 +540,7 @@
         function closeModal() {
             modalContainer.classList.remove('show');
             modalContainer.setAttribute('aria-hidden', 'true');
+            html.style.overflowY = 'auto';
             body.style.overflowY = 'auto';
             body.setAttribute('aria-hidden', 'false');
 
@@ -549,6 +550,7 @@
         function closeTYModal() {
             tyModal.classList.remove('show');
             tyModal.setAttribute('aria-hidden', 'true');
+            html.style.overflowY = 'auto';
             body.style.overflowY = 'auto';
             body.setAttribute('aria-hidden', 'false');
 
