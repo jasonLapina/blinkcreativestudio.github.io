@@ -424,6 +424,13 @@
         const focusableContent = signUpModal.querySelectorAll(focusableElements);
         const lastFocusableElement = focusableContent[focusableContent.length - 1]; // get last element to be focused inside modal
 
+        modalContainer.addEventListener("click", function(event) {
+            // If user either clicks X button OR clicks outside the modal window, then close modal by calling closeModal()
+            if ( event.target.matches(".button-close-modal") || !event.target.closest(".modal")) {
+                closeModal();
+            }
+        }, false)
+
         document.addEventListener('keydown', function(e) {
             let isTabPressed = e.key === 'Tab' || e.keyCode === 9;
 
@@ -494,7 +501,7 @@
                 tyModalText.innerText = "Oh no, something went wrong with the registration process! Please try again later.";
             }
 
-            if(!tyModalContainer.classList.contains('show')) {
+            if(!tyModal.classList.contains('show')) {
                 body.style.overflowY = 'auto';
             } else {
                 body.style.overflowY = 'hidden';
@@ -510,18 +517,22 @@
             modalContainer.setAttribute('aria-hidden', 'true');
             body.style.overflowY = 'auto';
             body.setAttribute('aria-hidden', 'false');
+
+            resetFieldValues();
         }
 
         function closeTYModal() {
-            tyModalContainer.classList.remove('show');
-            tyModalContainer.setAttribute('aria-hidden', 'true');
+            tyModal.classList.remove('show');
+            tyModal.setAttribute('aria-hidden', 'true');
             body.style.overflowY = 'auto';
             body.setAttribute('aria-hidden', 'false');
+
+            resetFieldValues();
         }
         
         function resetFieldValues() {
             for (const fieldGroup of document.querySelectorAll(".mc-events-field-group")) {
-                fieldGroup.children[1].value = ""
+                fieldGroup.children[0].value = ""
             }
 
             mcSuccessMsg.style.display = "none";
