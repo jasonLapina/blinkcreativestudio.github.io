@@ -1916,13 +1916,28 @@ div.mce_inline_error {
   grid-column: 1 / 3;
 }
 
+.artist-card {
+  max-width: 120px;
+}
+
 .artist-card-image-container {
-  background-image: url("/assets/herspective/Maroon Textured BG.jpg");
+  /* background-image: url("/assets/herspective/Maroon Textured BG.jpg"); */
   overflow: hidden;
   border-radius: 16px;
   width: 120px;
   height: 120px;
   margin-bottom: 12px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.artist-card-image-container img {
+  width: 100%;
+  height: auto;
+}
+
+.artist-card-image-container:hover {
+  transform: scale(1.1);
 }
 
 .artist-name {
@@ -1988,6 +2003,10 @@ div.mce_inline_error {
     font-size: 16px;
   }
 
+  .artist-card {
+    max-width: 140px;
+  }
+
   .artist-card-container {
     display: flex;
     flex-wrap: wrap;
@@ -2020,7 +2039,7 @@ div.mce_inline_error {
   }
 
   .artist-title {
-    font-size: 12px;
+    font-size: 10px;
   }
 }
 
@@ -2048,11 +2067,15 @@ div.mce_inline_error {
 
   .intro-body,
   .artist-name {
-    font-size: 20px;
+    font-size: 16px;
   }
 
   .artist-title {
-    font-size: 16px;
+    font-size: 12px;
+  }
+
+  .artist-card {
+    max-width: 160px;
   }
 
   .artist-card-container {
@@ -2079,5 +2102,315 @@ div.mce_inline_error {
   .artist-card-image-container {
     width: 160px;
     height: 160px;
+  }
+}
+
+/* Mailing Modal  */
+
+.mailing-modal-container {
+  display: none;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.mailing-modal-container.show {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.33);
+  position: fixed;
+  z-index: 1001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+}
+
+#mailing-modal {
+  background-image: url("/assets/footer-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  color: var(--white);
+  padding: 0px;
+  text-align: start;
+}
+
+.mailing-header-container {
+  background-color: var(--primary-color);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45vh;
+}
+
+.mailing-header-image-container {
+  width: 55%;
+}
+
+.mailing-header-image-container img {
+  width: 100%;
+  height: auto;
+}
+
+.mailing-modal-content {
+  height: 55vh;
+  padding: 1.5rem 2rem;
+}
+
+.mailing-modal-content .heading3,
+.mailing-modal-content .heading2 {
+  color: var(--gray-50);
+}
+
+@media (min-width: 576px) {
+  #mailing-modal {
+    flex-direction: row;
+    max-width: 1000px;
+  }
+
+  .mailing-header-container {
+    width: 50%;
+    height: unset;
+    padding: 6rem 0rem;
+  }
+
+  .mailing-header-image-container {
+    width: 60%;
+  }
+
+  .mailing-modal-content {
+    height: unset;
+    margin: 3rem 2rem;
+    padding: 0;
+  }
+}
+
+/* Program  */
+
+.shadow {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.program-item {
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.program-item .image-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  /* transform: scale(1.1); */
+}
+
+.program-title {
+  font-size: 18px;
+}
+
+@media (min-width: 576px) {
+  .image-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .program-details {
+    width: 90%;
+    margin-left: 2rem;
+  }
+
+  .program-item .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .program-title {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .program-item {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    align-items: center;
+  }
+}
+
+/* Featured Artist Modal  */
+
+#fa-modal {
+  background-image: url("/assets/herspective/Maroon Textured BG.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 0;
+  text-align: center;
+  justify-content: start;
+  position: relative;
+  overflow: scroll;
+  max-height: 100vh;
+}
+
+#fa-modal::-webkit-scrollbar {
+  display: none;
+}
+
+#fa-modal {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.fa-modal-container {
+  display: none;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.fa-modal-container.show {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.33);
+  position: fixed;
+  z-index: 1001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+}
+
+#fa-header-bg-mobile {
+  width: 100%;
+}
+
+#fa-header-bg-image-mobile {
+  width: 100%;
+  height: auto;
+}
+
+#fa-header-web {
+  display: none;
+}
+
+#fa-header-mobile {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top center;
+  width: 100%;
+  position: relative;
+}
+
+#fa-header-name-container-mobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  bottom: -3rem;
+}
+
+#fa-name-image-container {
+  max-width: 400px;
+  padding: 0 2rem;
+  width: 100%;
+}
+
+#fa-header-name-web,
+#fa-header-name-mobile {
+  width: 100%;
+  height: auto;
+}
+
+#fa-header-title-web,
+#fa-header-title-mobile {
+  color: var(--white);
+  font-size: 16px;
+  width: 70%;
+  margin-top: -1rem;
+}
+
+.white {
+  color: var(--white) !important;
+}
+
+#fa-bio {
+  color: var(--white);
+  text-align: left;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 4rem 1.5rem 0 1.5rem;
+}
+
+#fa-bio::-webkit-scrollbar {
+  display: none;
+}
+
+#fa-bio {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+#fa-header-bg-web {
+  display: none;
+}
+
+@media (min-width: 576px) {
+  #fa-modal {
+    scroll: unset;
+  }
+
+  #fa-header-mobile {
+    display: none;
+  }
+
+  #fa-header-bg-web {
+    display: block;
+    width: 100%;
+    top: 0;
+    z-index: 0;
+  }
+
+  #fa-header-bg-image {
+    width: 100%;
+    height: auto;
+  }
+
+  #fa-header-name-container-web {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem 2rem;
+  }
+
+  #fa-header-web {
+    display: block;
+    width: 100%;
+  }
+
+  #fa-bio {
+    /* max-height: 60vh; */
+    overflow: scroll;
+    margin: 1rem 2rem;
+    padding: unset;
+  }
+
+  #fa-header-title-web {
+    font-size: 14px;
+    width: 90%;
+    margin-top: -0.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  #fa-modal {
+    border-radius: 28px;
   }
 }
