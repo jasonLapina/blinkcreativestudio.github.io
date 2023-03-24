@@ -1947,7 +1947,7 @@ div.mce_inline_error {
 
 .artist-title {
   text-transform: uppercase;
-  color: var(--orange);
+  color: var(--primary-color);
   font-size: 10px;
   letter-spacing: 0.2em;
   font-weight: 700;
