@@ -2415,3 +2415,135 @@ div.mce_inline_error {
     max-height: 98vh;
   }
 }
+
+// Registration Page
+
+.reg-input-container input {
+  width: 120%;
+}
+
+/* .reg-form {
+  font-family: var(--body-font);
+  display: flex;
+  flex-direction: column;
+}
+
+#reg-name,
+#reg-company {
+  margin: auto;
+  transform: skew(-20deg);
+  border: solid 1px var(--gray-200);
+}
+
+#reg-name label,
+#reg-company label {
+  background-color: var(--gray-200);
+  padding: 10px 30px;
+}
+
+#reg-name span,
+#reg-company span {
+  color: var(--gray-800);
+  transform: skew(20deg);
+}
+
+#reg-name input,
+#reg-company input {
+  background-color: transparent;
+  padding: 8px 10px;
+  transform: skew(20deg);
+}
+
+#submit-button {
+  transform: skew(-20deg);
+  border: solid 4px var(--primary-color);
+  padding: 4px 30px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  margin: auto;
+  transition: all 0.3s ease;
+}
+
+#submit-button:hover {
+  background-color: transparent;
+  color: var(--primary-color);
+}
+
+#submit-button input {
+  transform: skew(20deg);
+  background-color: transparent;
+  color: var(--white);
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
+  font-family: var(--body-font);
+}
+
+#submit-button:hover input {
+  color: var(--primary-color);
+} */
+
+.reg-body {
+  background-image: url("/assets/Reg Page/MOBILE_BG.jpg");
+  background-color: var(--gray-200);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.reg-modal {
+  background-color: var(--white);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+  margin: auto;
+}
+
+.reg-input {
+  border: none;
+  outline: none;
+}
+
+#mc-embedded-reg-subscribe {
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  color: var(--white);
+}
+
+.button-slanted.blue {
+  background-color: #214394;
+  border-color: #214394;
+  transition: all 0.3s ease;
+}
+
+.button-slanted.blue:hover {
+  background-color: transparent;
+}
+
+.button-slanted.blue:hover #mc-embedded-reg-subscribe {
+  color: #214394;
+}
+
+.blue {
+  color: #214394;
+}
+
+.dsm-image-container {
+  width: 200px !important;
+  height: auto !important;
+  margin: auto;
+}
+
+.dsm-image-container img {
+  width: 100%;
+  height: auto;
+}
+
+.reg-input {
+  width: 100%;
+}
+
+.mc-name-container,
+.mc-name {
+  width: 100%;
+}
