@@ -1,0 +1,81 @@
+[data-aos][data-aos][data-aos-duration="50"],body[data-aos-duration="50"] [data-aos]{
+	transition-duration:50ms
+}
+[data-aos][data-aos][data-aos-delay="50"],body[data-aos-delay="50"] [data-aos]{
+	transition-delay:0s
+}
+[data-aos][data-aos][data-aos-delay="50"].aos-animate,body[data-aos-delay="50"] [data-aos].aos-animate{
+	transition-delay:50ms
+}
+[data-aos][data-aos][data-aos-duration="100"],body[data-aos-duration="100"] [data-aos]{
+	transition-duration:.1s
+}
+[data-aos][data-aos][data-aos-delay="100"],body[data-aos-delay="100"] [data-aos]{
+	transition-delay:0s
+}
+[data-aos][data-aos][data-aos-delay="100"].aos-animate,body[data-aos-delay="100"] [data-aos].aos-animate{
+	transition-delay:.1s
+}
+[data-aos][data-aos][data-aos-duration="200"],body[data-aos-duration="200"] [data-aos]{
+	transition-duration:.2s
+}
+[data-aos][data-aos][data-aos-delay="200"],body[data-aos-delay="200"] [data-aos]{
+	transition-delay:0s
+}
+[data-aos][data-aos][data-aos-delay="200"].aos-animate,body[data-aos-delay="200"] [data-aos].aos-animate{
+	transition-delay:.2s
+}
+
+[data-aos][data-aos][data-aos-duration="700"],body[data-aos-duration="700"] [data-aos]{
+	transition-duration:.7s
+}
+[data-aos][data-aos][data-aos-delay="700"],body[data-aos-delay="700"] [data-aos]{
+	transition-delay:0s
+}
+[data-aos][data-aos][data-aos-delay="700"].aos-animate,body[data-aos-delay="700"] [data-aos].aos-animate{
+	transition-delay:.7s
+}
+
+
+[data-aos][data-aos][data-aos-duration="900"],body[data-aos-duration="900"] [data-aos]{
+	transition-duration:.9s
+}
+[data-aos][data-aos][data-aos-delay="900"],body[data-aos-delay="900"] [data-aos]{
+	transition-delay:0s
+}
+[data-aos][data-aos][data-aos-delay="900"].aos-animate,body[data-aos-delay="900"] [data-aos].aos-animate{
+	transition-delay:.9s
+}
+
+
+[data-aos]{
+	pointer-events:none
+}
+[data-aos].aos-animate{
+	pointer-events:auto
+}
+[data-aos][data-aos][data-aos-easing=linear],body[data-aos-easing=linear] [data-aos]{
+	transition-timing-function:cubic-bezier(.25,.25,.75,.75)
+}
+[data-aos][data-aos][data-aos-easing=ease],body[data-aos-easing=ease] [data-aos]{
+	transition-timing-function:ease
+}
+
+
+@media screen{
+	html:not(.no-js) [data-aos^=fade][data-aos^=fade]{
+		opacity:0;
+		transition-property:opacity,-webkit-transform;
+		transition-property:opacity,transform;
+		transition-property:opacity,transform,-webkit-transform
+}
+	html:not(.no-js) [data-aos^=fade][data-aos^=fade].aos-animate{
+		opacity:1;
+		-webkit-transform:none;
+		transform:none
+}
+	html:not(.no-js) [data-aos=fade-up]{
+		-webkit-transform:translate3d(0,100px,0);
+		transform:translate3d(0,100px,0)
+}
+}
