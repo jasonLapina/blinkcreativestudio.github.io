@@ -31,7 +31,6 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
-  overflow-y: auto;
 }
 
 body {
@@ -41,6 +40,8 @@ body {
   font-weight: 400;
   line-height: 1.5;
   overflow-y: overlay;
+  min-height: 100vh;
+  width: 100vw;
   min-height: 100vh;
   width: 100vw;
 }
@@ -2243,6 +2244,34 @@ div.mce_inline_error {
   font-size: 10px;
   letter-spacing: 0.2em;
   font-weight: 700;
+}
+
+@media (min-width: 448px) {
+  .events-cta {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 4px 28px;
+    transition: all 0.5s ease;
+    -webkit-transform: skew(-14deg);
+    transform: skew(-14deg);
+  }
+
+  .events-cta span,
+  .sign-up-button input {
+    display: block;
+    font-family: "Geometric 231";
+    font-size: 1.8rem;
+    color: var(--white);
+    transition: all 0.3s ease;
+    -webkit-transform: skew(14deg);
+    transform: skew(14deg);
+  }
+}
+
+@media (max-width: 576px) {
+  .main-logo-container {
+    padding: 0;
+  }
 }
 
 @media (min-width: 448px) {
