@@ -594,12 +594,26 @@
 
         function changeShowreelBtnFunc() {
             changeShowreelBtnToEventsBtn();
-            setTimeout(changeEventsBtnToShowreelBtn, 3000);
+            setTimeout(changeEventsBtnToShootBtn, 3000);
+            setTimeout(changeShootBtnToShowreelBtn, 6000);
             
             setInterval(() => {
                 changeShowreelBtnToEventsBtn();
-                setTimeout(changeEventsBtnToShowreelBtn, 3000);
+                setTimeout(changeEventsBtnToShootBtn, 3000);
+                setTimeout(changeShootBtnToShowreelBtn, 6000);
             }, 12000)
+        }
+
+        function changeEventsBtnToShootBtn() {
+            srbtnText.innerText = "Book a Shoot";
+            srbtn.removeEventListener('click', setEventsBtnFunc);
+            srbtn.addEventListener('click', setShootBtnFunc);
+        }
+
+         function changeShootBtnToShowreelBtn() {
+            srbtnText.innerText = "Watch Our Showreel";
+            srbtn.removeEventListener('click', setShootBtnFunc);
+            srbtn.addEventListener('click', setShowreelBtnFunc);
         }
         
         function changeShowreelBtnToEventsBtn() {
@@ -616,6 +630,10 @@
         
         function setEventsBtnFunc() {
             location.href = "/events";
+        }
+
+        function setShootBtnFunc() {
+            location.href = "/appointments";
         }
         
         function setShowreelBtnFunc() {
