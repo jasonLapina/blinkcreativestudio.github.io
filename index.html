@@ -283,6 +283,7 @@
                             </svg>
 
                             <p class="heading4 mt-4">Audio-Visual <br> Production</p>
+                            <p class="heading4 mt-4">Audio-Visual <br> Production</p>
                         </div>
                     </a>
                 </div>
@@ -617,6 +618,7 @@
         }
         
         function changeShowreelBtnToEventsBtn() {
+            srbtnText.innerText = "Join Us";
             srbtnText.innerText = "Join Us";
             srbtn.removeEventListener('click', setShowreelBtnFunc);
             srbtn.addEventListener('click', setEventsBtnFunc);
