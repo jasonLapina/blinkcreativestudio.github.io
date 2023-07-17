@@ -1784,20 +1784,22 @@ div.mce_inline_error {
 
 .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background-color: var(--primary-color) !important;
+  margin-top: 10%;
 }
 
 .swiper-container {
-  height: 100vh;
-  padding: 10vh 0 0 0;
+  height: 90vh;
+  padding: 10vh 0;
   overflow: hidden;
   display: flex;
   position: relative;
   background: linear-gradient(to left, transparent, #fff);
+  min-height: 500px;
 }
 
 .swiper {
   width: 100%;
-  height: 90%;
+  max-height: 800px;
   overflow: visible !important;
 }
 
@@ -1847,6 +1849,7 @@ div.mce_inline_error {
   z-index: 3;
   box-shadow: 0 0 0 #e2e2e2;
   cursor: pointer;
+  /* max-height: 800px; */
 }
 
 .swiper-content.active {
@@ -1872,19 +1875,20 @@ div.mce_inline_error {
   height: 80%;
   transition: all 0.5s ease-out;
   position: absolute;
-  top: 0.5rem;
+  top: 2.5rem;
   bottom: 0;
-  box-shadow: 0 0 0 #d2d2d2;
   overflow: hidden;
   left: 50%;
   padding: 0 1rem;
+  max-height: 70%;
 }
 
 .details.active {
   width: 55vw;
-  padding-left: 180px;
+  padding-left: 15vh;
   left: 0%;
   opacity: 1;
+  box-shadow: 8px 8px 8px #f2f2f2;
 }
 
 .details.active .details-content {
@@ -1902,6 +1906,7 @@ div.mce_inline_error {
   align-items: start;
   /* justify-content: space-between; */
   /* display: grid; */
+  padding-top: 1rem;
 }
 
 .package-back-btn {
@@ -1910,7 +1915,7 @@ div.mce_inline_error {
   color: var(--gray-400);
   border: none;
   font-family: var(--body-font);
-  top: 0rem;
+  top: 1rem;
   right: 0;
   font-size: 24px;
   width: 24px;
@@ -2032,6 +2037,7 @@ div.mce_inline_error {
     box-shadow: 2px 2px 8px #e2e2e2;
     left: unset;
     margin: auto;
+    max-height: unset;
   }
 
   .details.active {
