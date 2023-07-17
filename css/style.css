@@ -54,6 +54,7 @@ body.overflow {
 /* Scrollbar Styling */
 ::-webkit-scrollbar {
   width: 4px;
+  height: 4px;
 }
 
 ::-webkit-scrollbar-track {
@@ -1993,7 +1994,8 @@ div.mce_inline_error {
 }
 
 .select-package-details {
-  padding: 0.5rem 2rem;
+  /* padding: 0.5rem 2rem; */
+  padding: 0.5rem 0.5rem 0.5rem 2rem;
   overflow: scroll;
   display: flex;
   flex-direction: column;
@@ -2010,8 +2012,8 @@ div.mce_inline_error {
 }
 
 .open-calendly-button {
-  position: absolute;
-  bottom: 1rem;
+  width: max-content;
+  margin-top: 1rem;
 }
 
 @media (max-width: 767px) {
@@ -2059,19 +2061,11 @@ div.mce_inline_error {
   }
 }
 
-/* @media (max-width: 576px) {
-  .swiper-content.active {
+@media (max-width: 1000px) {
+  .package-dropdown-btn {
+    font-size: 20px;
   }
-
-  .details {
-  }
-
-  .details.active {
-  }
-
-  .select-package-details {
-  }
-} */
+}
 
 /* -------------- Events Page -------------- */
 
