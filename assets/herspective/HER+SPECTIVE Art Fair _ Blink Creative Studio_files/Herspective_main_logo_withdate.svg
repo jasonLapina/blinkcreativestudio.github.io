@@ -2,7 +2,7 @@
 <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 312.35 218.01">
   <defs>
     <style>
-      <!-- @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900'); -->
+      @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900');
 
       @font-face {
         font-family: 'Lato-Black';
@@ -140,7 +140,7 @@
   </g>
 <!-- Code injected by live-server -->
 <script>
-	// <![CDATA[  <-- For SVG support
+	<!-- // <![CDATA[  For SVG support
 	if ('WebSocket' in window) {
 		(function () {
 			function refreshCSS() {
@@ -174,6 +174,6 @@
 	else {
 		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
 	}
-	// ]]>
+	// ]]> -->
 </script>
 </svg>
