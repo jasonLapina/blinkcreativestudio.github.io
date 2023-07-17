@@ -391,7 +391,15 @@
             price.innerText = pesoSign + " " + activePackage.price;
             desc.innerText = activePackage.desc;
             desc2.innerText = activePackage.desc2;
+            console.log("activePackage.calendly_link", activePackage.calendly_link);
             appointmentBtn.href = activePackage.calendly_link;
+
+            appointmentBtn.addEventListener("click", (e) => {
+                if (appointmentBtn.href && appointmentBtn.href !== "") {
+                    console.log("Event listener")
+                    Calendly.initPopupWidget({ url: appointmentBtn.href, color: '#a30a24', textColor: '#ffffff', branding: undefined }, true);
+                }
+            });
             appointmentBtnText.innerText = "Book Now";
 
             for (let i of activePackage.inclusions) {
@@ -503,14 +511,16 @@
             dropdownMenu.id = category.category;
             dropdownButton.id = "package-dropdown-btn";
 
-            for (let item of category.packages) {
-                var subItem = document.createElement("p");
+            if (category.category !== "studio-rental") {
+                for (let item of category.packages) {
+                    var subItem = document.createElement("p");
 
-                subItem.classList.add("package-dropdown-item");
-                subItem.classList.add(item.package);
-                subItem.innerText = item.name;
+                    subItem.classList.add("package-dropdown-item");
+                    subItem.classList.add(item.package);
+                    subItem.innerText = item.name;
 
-                dropdownContent.appendChild(subItem);
+                    dropdownContent.appendChild(subItem);
+                }
             }
 
             dropdownButton.innerText = category.packages[0].name;
@@ -539,6 +549,13 @@
             swiperWrapper.appendChild(swiperSlide);
         }
 
+        // function openCalendly(href) {
+        //     if (href && href !== "") {
+        //         console.log("Event listener")
+        //         Calendly.initPopupWidget({ url: href, color: '#a30a24', textColor: '#ffffff', branding: undefined }, true);
+        //     }
+        // }
+
         // Initialize swiper slide open and close
         body.addEventListener("click", (e) => {
             var swiperWrapper = document.querySelector(".swiper-wrapper");
@@ -547,7 +564,7 @@
             var activeSlideChildren = [...activeSlide.children];
             var swiperContent = activeSlideChildren.find(el => el.classList.contains("swiper-content"))
 
-            if (activeSlideChildren[0].classList.contains("active") && !e.target.closest(".swiper-slide-active") ) {
+            if (activeSlideChildren[0].classList.contains("active") && !e.target.closest(".swiper-slide-active")) {
                 hidePackage(swiperContent);
             }
             else if (!activeSlideChildren[0].classList.contains("active") && e.target.closest(".swiper-content")) {
@@ -628,13 +645,9 @@
             })
         }
 
-        for (let btn of document.querySelectorAll(".open-calendly-button")) {
-            btn.addEventListener("click", (e) => {
-                if (btn.href && btn.href !== "") {
-                    Calendly.initPopupWidget({ url: btn.href, color: '#a30a24', textColor: '#ffffff', branding: undefined });
-                }
-            })
-        }
+        // for (let btn of document.querySelectorAll(".open-calendly-button")) {
+        //     btn.addEventListener("click", openCalendly);
+        // }
 
         body.addEventListener("keydown", (e) => {
             // Arrow Left Key
