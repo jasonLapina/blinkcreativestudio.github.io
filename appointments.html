@@ -33,7 +33,7 @@
 
     <!-- Calendly link widget begin -->
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
     <!-- Calendly link widget end -->
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -74,7 +74,8 @@
                 <li><a class="menu" href="/capabilities">Capabilities</a></li>
                 <li><a class="menu" href="/works">Works</a></li>
                 <li><a class="menu" href="/studio">Studio</a></li>
-                <li><a class="menu" id="menu-contact" href="/events">Events</a></li>
+                <li><a class="menu" href="/events">Events</a></li>
+                <!-- <li><a class="menu" id="menu-contact" href="/events">Events</a></li> -->
 
                 <a class="menu" id="menu-contact" href="/appointments">
                     <button class="button-slanted modal-button nav-button" id="book-now-btn"><span>Book Now</span></button>
@@ -240,12 +241,20 @@
     <!-- MAIN -->
     <script src="/js/main.js" type="module"></script>
 
+    <!-- CALENDLY  -->
+    <!-- <script type="text/javascript">
+        window.onload = function () { 
+            Calendly.initBadgeWidget({ url: 'https://calendly.com/blinkcreativestudio/graduation-package-bronze', text: 'Schedule time with me', color: '#0069ff', textColor: '#ffffff', branding: undefined }); 
+        }
+    </script> -->
+
     <!-- SWIPER JS  -->
     <script type="module">
         import packages from "./js/data/packages-per-category.js";
         import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.esm.browser.min.js';
 
         const body = document.querySelector("body");
+        const swiperContainer = document.querySelector(".swiper-container");
         const swiperWrapper = document.querySelector(".swiper-wrapper");
         const pesoSign = "₱";
 
@@ -304,6 +313,8 @@
                 centeredSlides: true,
                 grabCursor: true,
                 slidesPerView: 1,
+                speed: 700,
+                focusableElements: "button",
 
                 pagination: {
                     el: ".swiper-pagination",
@@ -312,20 +323,18 @@
 
                 coverflowEffect: {
                     rotate: 0,
-                    stretch: 0,
+                    stretch: 200,
                     depth: 250,
                     modifier: 1,
                     slideShadows: false,
                 },
 
                 breakpoints: {
-                    600: {
-                        slidesPerView: 2,
-                    },
-                    1000: {
+                    768: {
                         slidesPerView: 3,
                         coverflowEffect: {
                             stretch: -30,
+                            depth: 250,
                         },
                     }
                 }
@@ -378,10 +387,10 @@
 
             packageDetails.replaceChildren();
 
-            appointmentBtn.href = activePackage.calendly_link;
             price.innerText = pesoSign + " " + activePackage.price;
             desc.innerText = activePackage.desc;
             desc2.innerText = activePackage.desc2;
+            appointmentBtn.href = activePackage.calendly_link;
 
             for (let i of activePackage.inclusions) {
                 let item = document.createElement("li");
@@ -425,37 +434,39 @@
             }
         }
 
-        const fillCategoryPackages = (p, packageDetailsContainer) => {
-            if (p.category === "studio-rental") return;
+        // const fillCategoryPackages = (p, packageDetailsContainer) => {
+        //     console.log(p.category)
+        //     if (p.category === "studio-rental") return;
 
-            var dropdownMenu = document.createElement("div");
-            var dropdownContent = document.createElement("div");
-            var dropdownButton = document.createElement("div");
+        //     var dropdownMenu = document.createElement("div");
+        //     var dropdownContent = document.createElement("div");
+        //     var dropdownButton = document.createElement("div");
 
-            dropdownMenu.classList.add("package-dropdown");
-            dropdownButton.classList.add("package-dropdown-btn");
-            dropdownButton.classList.add(p.category);
-            dropdownContent.classList.add("package-dropdown-content");
-            dropdownContent.classList.add(p.category);
-            dropdownMenu.id = p.category;
-            dropdownButton.id = "package-dropdown-btn";
+        //     dropdownMenu.classList.add("package-dropdown");
+        //     dropdownButton.classList.add("package-dropdown-btn");
+        //     dropdownButton.classList.add(p.category);
+        //     dropdownContent.classList.add("package-dropdown-content");
+        //     dropdownContent.classList.add(p.category);
+        //     dropdownMenu.id = p.category;
+        //     dropdownButton.id = "package-dropdown-btn";
+        //     dropdownButton.tabIndex = 0;  
 
-            for (let item of p.packages) {
-                var subItem = document.createElement("p");
+        //     for (let item of p.packages) {
+        //         var subItem = document.createElement("p");
 
-                subItem.classList.add("package-dropdown-item");
-                subItem.classList.add(item.package);
-                subItem.innerText = item.name;
+        //         subItem.classList.add("package-dropdown-item");
+        //         subItem.classList.add(item.package);
+        //         subItem.innerText = item.name;
 
-                dropdownContent.appendChild(subItem);
-            }
+        //         dropdownContent.appendChild(subItem);
+        //     }
 
-            dropdownButton.innerText = p.packages[0].name;
-            dropdownMenu.appendChild(dropdownButton);
-            dropdownMenu.appendChild(dropdownContent);
+        //     dropdownButton.innerText = p.packages[0].name;
+        //     dropdownMenu.appendChild(dropdownButton);
+        //     dropdownMenu.appendChild(dropdownContent);
 
-            packageDetailsContainer.appendChild(dropdownMenu);
-        }
+        //     packageDetailsContainer.appendChild(dropdownMenu);
+        // }
 
         // Initialize Cards
         for (let category of packages) {
@@ -486,7 +497,9 @@
             swiperSlide.classList.add("swiper-slide");
             swiperContent.classList.add("swiper-content");
             imageWrapper.classList.add("image-wrapper");
+
             image.src = category.image;
+            image.draggable = false;
             // Details Content 
             details.classList.add("details");
             detailsContent.classList.add("details-content");
@@ -499,9 +512,12 @@
             packageName.classList.add("heading-1");
             openCalendlyBtn.classList.add("button-slanted");
             openCalendlyBtn.classList.add("open-calendly-button");
+
+            packageBackBtn.tabIndex = 0;
             openCalendlyBtn.id = "product-details-btn";
             calendlyButtonText.innerText = "Set an Appointment";
             packageName.id = "package-name";
+
             packageName.innerText = category.categoryName;
 
             // Dropdown Menu
@@ -560,13 +576,14 @@
             if (activeSlideChildren[0].classList.contains("active") && !e.target.closest(".details") ) {
                 hidePackage(swiperContent);
             }
-            else if (!activeSlideChildren[0].classList.contains("active")) {
+            else if (!activeSlideChildren[0].classList.contains("active") && e.target.closest(".swiper-content")) {
                 showPackage(swiperContent);
             }
             else if (e.target.classList.contains("package-back-btn")) {
                 hidePackage(swiperContent);
             }
         })
+        
         // Initialize dropdown menu
         for (const dropdown of document.querySelectorAll(".package-dropdown-btn")) {
             dropdown.addEventListener("click", (e) => {
@@ -599,22 +616,68 @@
         // Last to call to initialize the slides before initializing the swiper
         const swiper = createNewSwiper();
 
+        // Hide package on Enter when back button is focused on tab
+        for (let backBtn of document.querySelectorAll("package-back-btn")) {
+            backBtn.addEventListener("keydown", (e) => {
+                // Enter Key
+                if (e.keyCode === 13) {
+                    console.log("Enter key pressed")
+                    // let swiperWrapperChildren = [...swiperWrapper.children];
+                    // let activeSlide = swiperWrapperChildren.find(el => el.classList.contains("swiper-slide-active"));
+
+                    // hidePackage(activeSlide.children[0]);
+                }
+            })
+        }
+
+        for (let swiperSlide of swiperWrapper.children) {
+            swiperSlide.addEventListener("mouseover", () => {
+                // Insert code to disable mouseover when a slide content is active 
+
+                if(swiperSlide.classList.contains("swiper-slide-prev")) {
+                    swiper.slidePrev(700);
+                }
+                if(swiperSlide.classList.contains("swiper-slide-next")) {
+                    swiper.slideNext(700);
+                }
+            })
+        }
+
+        for (let swiperSlide of swiperWrapper.children) {
+            swiperSlide.addEventListener("click", () => {
+                if (swiperSlide.classList.contains("swiper-slide-prev")) {
+                    swiper.slidePrev(700);
+                }
+                if (swiperSlide.classList.contains("swiper-slide-next")) {
+                    swiper.slideNext(700);
+                }
+            })
+        }
+
+        for (let btn of document.querySelectorAll(".open-calendly-button")) {
+            btn.addEventListener("click", (e) => {
+                if (btn.href && btn.href !== "") {
+                    Calendly.initPopupWidget({ url: btn.href, color: '#a30a24', textColor: '#ffffff', branding: undefined });
+                }
+            })
+        }
+
         body.addEventListener("keydown", (e) => {
             // Arrow Left Key
             if (e.keyCode === 37) {
-                swiper.slidePrev(300);
+                swiper.slidePrev(700);
             }
             // Arrow Right Key
             if (e.keyCode === 39) {
-                swiper.slideNext(300);
+                swiper.slideNext(700);
             }
             // Enter Key
             if (e.keyCode === 13) {
-                let swiperWrapperChildren = [... swiperWrapper.children];
+                let swiperWrapperChildren = [...swiperWrapper.children];
                 let activeSlide = swiperWrapperChildren.find(el => el.classList.contains("swiper-slide-active"));
-                
+
                 showPackage(activeSlide.children[0]);
-                }
+            }
             // Escape Key
             if (e.keyCode === 27) {
                 let swiperWrapperChildren = [...swiperWrapper.children];
@@ -623,30 +686,6 @@
                 hidePackage(activeSlide.children[0]);
             }
         });
-
-        for (let swiperSlide of swiperWrapper.children) {
-            swiperSlide.addEventListener("mouseover", () => {
-                // Insert code to disable mouseover when a slide content is active 
-
-                if(swiperSlide.classList.contains("swiper-slide-prev")) {
-                    swiper.slidePrev(300);
-                }
-                if(swiperSlide.classList.contains("swiper-slide-next")) {
-                    swiper.slideNext(300);
-                }
-            })
-        }
-
-        for (let swiperSlide of swiperWrapper.children) {
-            swiperSlide.addEventListener("click", () => {
-                if (swiperSlide.classList.contains("swiper-slide-prev")) {
-                    swiper.slidePrev(300);
-                }
-                if (swiperSlide.classList.contains("swiper-slide-next")) {
-                    swiper.slideNext(300);
-                }
-            })
-        }
 
     </script>
 </body>
