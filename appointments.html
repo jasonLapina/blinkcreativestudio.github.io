@@ -24,12 +24,16 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/dist/aos/aos.css">
 
+    <!-- Swiper.js  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
     <!-- Font Awesome  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 
     <!-- Calendly link widget begin -->
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
     <!-- Calendly link widget end -->
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -70,7 +74,8 @@
                 <li><a class="menu" href="/capabilities">Capabilities</a></li>
                 <li><a class="menu" href="/works">Works</a></li>
                 <li><a class="menu" href="/studio">Studio</a></li>
-                <!-- <li><a class="menu" id="menu-contact" href="/events">Events</a></li> -->
+                <!-- <li><a class="menu" href="/events">Events</a></li>
+                <!-- <li><a class="menu" id="menu-contact" href="/events">Events</a></li> --> -->
 
                 <a class="menu" id="menu-contact" href="/appointments">
                     <button class="button-slanted modal-button nav-button" id="book-now-btn"><span>Book Now</span></button>
@@ -83,136 +88,16 @@
         </div>
     </nav>
     <!-- End nav  -->
-    
-    <!-- Start Main Content  -->
+
+    <!-- Slider section  -->
     <header>
-        <section class="py-header">
-            <div class="container">
-                <div class="row align-items-top">
-                    <div class="col-lg-6 col-12 text-center order-lg-1" data-aos="fade-up">
-                        <img src="./assets/header img.png" alt="" class="w-100 main-img">
-                        <div class="package-details">
-                            <div class="package-header package-section">
-                                <h3 class="accordion-header">Package Name</h3>
-                                <h1 class="heading2 package-price">PhP <span class="price">----.--</span></h1>
-
-                                <div class="package-info package-section">
-                                    <div class="package-desc-container">
-                                        <em><p id="package-desc-content">
-                                            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                                        </p></em>
-    
-                                        <em><p id="package-desc-content-2">Fuga exercitationem provident eligendi inventore expedita enim quos magnam tenetur ipsa placeat eaque, fugit molestias cumque nobis corrupti temporibus aperiam? Reiciendis, ab.
-                                        </p></em>
-                                    </div>
-
-                                    <div class="package-inclusions-container">
-                                        <h3 id="package-inclusions-header">Includes:</h3>
-                                        <ul id="package-inclusions-content">
-                                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta aliquam at delectus.</li>
-                                            <li>Distinctio labore modi molestiae, accusantium, adipisci voluptates, maxime placeat debitis sed numquam recusandae.</li>
-                                            <li>Maxime et atque facere molestias.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <button class="button-slanted open-calendly-button" id="product-details-btn">
-                                <span>Choose a Date</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-12 mt-lg-0 mt-3 text-center text-lg-start" data-aos="fade-up">
-                        <h1 class="heading2 c-primary mb-4">Our Packages</h1>
-                        <div class="accordion">
-                            <div class="accordion-item">
-                                <button class="accordion-header" id="studio-rental">Studio <span>Rental</span></button>
-                            </div>
-                            <div class="accordion-item">
-                                <button class="accordion-header">Studio <span>Package</span></button>
-                                <div class="accordion-body" id="studio-package">
-                                    <div class="package-item" id="basic-a">Basic A</div>
-                                    <div class="package-item" id="basic-b">Basic B</div>
-                                    <div class="package-item" id="standard">Standard</div>
-                                    <div class="package-item" id="deluxe">Deluxe</div>
-                                    <div class="package-item" id="premium">Premium</div>
-                                </div>
-                            </div>
-                            <div class="accordion-item" >
-                                <button class="accordion-header">Graduation <span>Package</span></button>
-                                <div class="accordion-body" id="grad-package">
-                                    <div class="package-item" id="bronze">Bronze</div>
-                                    <div class="package-item" id="silver">Silver</div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <button class="accordion-header">UP Graduation <span>Package</span></button>
-                                <div class="accordion-body" id="up-grad-package">
-                                    <div class="package-item" id="bronze">Bronze</div>
-                                    <div class="package-item" id="silver">Silver</div>
-                                    <div class="package-item" id="gold">Gold</div>
-                                    <div class="package-item" id="platinum">Platinum</div>
-                                    <div class="package-item" id="diamond">Diamond</div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <button class="accordion-header">Maternity <span>Package</span></button>
-                                <div class="accordion-body" id="maternity-package">
-                                    <div class="package-item" id="baby-bump">Baby Bump</div>
-                                    <div class="package-item" id="im-pregnant">I'm Pregnant</div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <button class="accordion-header">Newborn Baby <span>Package</span></button>
-                                <div class="accordion-body" id="newborn-package">
-                                    <div class="package-item" id="bouncing-baby">Bouncing Baby</div>
-                                    <div class="package-item" id="bundle-of-joy">Bundle of Joy</div>
-                                    <div class="package-item" id="fresh-48">Fresh 48</div>
-                                    <div class="package-item" id="classic">Classic</div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <button class="accordion-header">Toddler | Kiddie | Pre-birthday <span>Package</span></button>
-                                <div class="accordion-body" id="kid-package">
-                                    <div class="package-item" id="keep-it-simple">Let's Keep it Simple</div>
-                                    <div class="package-item" id="little-celebration">Just a Little Celebration</div>
-                                    <div class="package-item" id="big-celebration">It's a Big Celebration</div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <button class="accordion-header">Family <span>Package</span></button>
-                                <div class="accordion-body" id="fam-package">
-                                    <div class="package-item" id="good-times">Good Times</div>
-                                    <div class="package-item" id="better-together">Better Together</div>
-                                    <div class="package-item" id="family-knows-best">Family Knows Best</div>
-                                    <div class="package-item" id="family-knows-better">Family Knows Better</div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <button class="accordion-header">Wedding <span>Package</span></button>
-                                <div class="accordion-body" id="wed-package">
-                                    <div class="package-item" id="tie-the-knot">Tie the Knot</div>
-                                    <div class="package-item" id="happily-ever-after">Happily Ever After</div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <button class="accordion-header">Debut <span>Package</span></button>
-                                <div class="accordion-body" id="debut-package">
-                                    <div class="package-item" id="sweet-eighteen">Sweet Eighteen</div>
-                                    <div class="package-item" id="elegant-lady">Elegant Lady</div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <button class="accordion-header">Baby Milestone <span>Session</span></button>
-                                <div class="accordion-body" id="baby-milestone">
-                                    <div class="package-item" id="baby-step">Baby Step</div>
-                                    <div class="package-item" id="the-full-collection">The "Full" Collection</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <section class="swiper-container">
+            <div class="swiper">
+                <div class="swiper-wrapper">
                 </div>
             </div>
+
+            <div class="swiper-pagination"></div>
         </section>
     </header>
     <!-- End Main Content  -->
@@ -355,6 +240,454 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
     <!-- MAIN -->
     <script src="/js/main.js" type="module"></script>
+
+    <!-- CALENDLY  -->
+    <!-- <script type="text/javascript">
+        window.onload = function () { 
+            Calendly.initBadgeWidget({ url: 'https://calendly.com/blinkcreativestudio/graduation-package-bronze', text: 'Schedule time with me', color: '#0069ff', textColor: '#ffffff', branding: undefined }); 
+        }
+    </script> -->
+
+    <!-- SWIPER JS  -->
+    <script type="module">
+        import packages from "./js/data/packages-per-category.js";
+        import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.esm.browser.min.js';
+
+        const body = document.querySelector("body");
+        const swiperContainer = document.querySelector(".swiper-container");
+        const swiperWrapper = document.querySelector(".swiper-wrapper");
+        const pesoSign = "₱";
+
+        const disableScroll = () => {
+            swiper.disable();
+        }
+        
+        const enableScroll = () => {
+            swiper.enable();
+        }
+        
+        const hide = (element) => {
+            element.classList.add("hide");
+        }
+
+        const show = (element) => {
+            element.classList.remove("hide");
+        }
+
+        const hideOtherSlides = (parent) => {
+            let swiperWrapper = parent.parentNode.parentNode;
+
+            for (let child of swiperWrapper.children) {
+                if (!child.classList.contains("swiper-slide-active")) {
+                    for (let grandchild of child.children) {
+                        grandchild.classList.add("hide");
+                    }
+                }
+            }
+        }
+
+        const showOtherSlides = (swiperWrapper) => {
+
+            for (let child of swiperWrapper.children) {
+                if (!child.classList.contains("swiper-slide-active")) {
+                    for (let grandchild of child.children) {
+                        grandchild.classList.remove("hide");
+                    }
+                }
+            }
+        }
+
+        const showDetailsBtn = (detailsDiv) => {
+            let detailsBtn = detailsDiv.previousElementSibling.children[0].id === "details-btn" ? detailsDiv.previousElementSibling.children[0] : detailsDiv.previousElementSibling.children[1];
+
+            detailsBtn.classList.remove("hide");
+        }
+
+        const createNewSwiper = () => {
+            return new Swiper('.swiper', {
+                direction: "horizontal",
+                effect: "coverflow",
+                loop: true,
+                loopedSlides: 3,
+                mousewheel: true,
+                centeredSlides: true,
+                grabCursor: true,
+                slidesPerView: 1,
+                speed: 700,
+                focusableElements: "button",
+
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+
+                coverflowEffect: {
+                    rotate: 0,
+                    stretch: 200,
+                    depth: 250,
+                    modifier: 1,
+                    slideShadows: false,
+                },
+
+                breakpoints: {
+                    768: {
+                        slidesPerView: 3,
+                        coverflowEffect: {
+                            stretch: -30,
+                            depth: 250,
+                        },
+                    }
+                }
+            });
+        }
+
+        const showPackage = (swiperContent) => {
+            swiperContent.classList.add("active");
+            swiperContent.nextElementSibling.classList.add("active");
+            disableScroll();
+            hideOtherSlides(swiperContent);
+        }
+
+        const hidePackage = (swiperContent) => {
+            swiperContent.classList.remove("active");
+            swiperContent.nextElementSibling.classList.remove("active");
+            enableScroll();
+            showOtherSlides(swiperContent.parentNode.parentNode);
+
+            hideDropDownMenu(swiperContent);
+        }
+
+        const hideDropDownMenu = (swiperContent) => {
+            var detailsDiv = swiperContent.nextElementSibling;
+            var detailsContent = detailsDiv.children[0];
+            var detailsContentChildren = [...detailsContent.children];
+            var packageDetailsContainer = detailsContentChildren.find(el => el.classList.contains("package-details-container"));
+            var packageDetailsContainerChildren = [...packageDetailsContainer.children];
+            var packageDropdown = packageDetailsContainerChildren.find(el => el.classList.contains("package-dropdown"));
+            var packageDropdownChildren = [...packageDropdown.children];
+            var packageDropdownContent = packageDropdownChildren.find(el => el.classList.contains("package-dropdown-content"));
+
+            if (packageDropdownContent.classList.contains("active")) {
+                packageDropdownContent.classList.remove("active")
+            }
+        }
+
+        const showPackageDetails = (packageName, dropdownMenu, packageDetails) => {
+            var dropdownMenuChildren = [... dropdownMenu.children];
+            var dropdownButton = dropdownMenuChildren.find(el => el.id === "package-dropdown-btn");
+            var activeCategory = packages.find(el => el.categoryName === packageName.innerText);
+            var activePackage = activeCategory.packages.find(el => el.name === dropdownButton.innerText);
+            var appointmentBtn = packageName.parentNode.nextElementSibling;
+
+            var price = document.createElement("h3");
+            var desc = document.createElement("p");
+            var desc2 = document.createElement("p");
+            var inclusions = document.createElement("ul");
+            var inclusionsHeader = document.createElement("p");
+
+            packageDetails.replaceChildren();
+
+            price.innerText = pesoSign + " " + activePackage.price;
+            desc.innerText = activePackage.desc;
+            desc2.innerText = activePackage.desc2;
+            appointmentBtn.href = activePackage.calendly_link;
+
+            for (let i of activePackage.inclusions) {
+                let item = document.createElement("li");
+                item.innerText = i;
+
+                inclusions.appendChild(item);
+            }
+
+            desc.classList.add("package-desc");
+            desc2.classList.add("package-desc");
+            inclusions.classList.add("package-inclusions");
+
+            packageDetails.appendChild(price);
+            packageDetails.appendChild(desc);
+            packageDetails.appendChild(desc2);
+
+            if (activePackage.inclusions2) {
+                let inclusionsHeader2 = document.createElement("p");
+                let inclusions2 = document.createElement("ul");
+
+                inclusionsHeader.innerText = "Pre-event inclusions:";
+                inclusionsHeader2.innerText = "Event Proper inclusions:";
+                inclusions2.classList.add("package-inclusions");
+
+                for (let i of activePackage.inclusions2) {
+                    let item = document.createElement("li");
+                    item.innerText = i;
+
+                    inclusions2.appendChild(item);
+                }
+
+                packageDetails.appendChild(inclusionsHeader);
+                packageDetails.appendChild(inclusions);
+                packageDetails.appendChild(inclusionsHeader2);
+                packageDetails.appendChild(inclusions2);
+            } else if (activePackage.inclusions && activePackage.inclusions.length > 0) {
+                inclusionsHeader.innerText = "Includes:";
+                
+                packageDetails.appendChild(inclusionsHeader);
+                packageDetails.appendChild(inclusions);
+            }
+        }
+
+        // const fillCategoryPackages = (p, packageDetailsContainer) => {
+        //     console.log(p.category)
+        //     if (p.category === "studio-rental") return;
+
+        //     var dropdownMenu = document.createElement("div");
+        //     var dropdownContent = document.createElement("div");
+        //     var dropdownButton = document.createElement("div");
+
+        //     dropdownMenu.classList.add("package-dropdown");
+        //     dropdownButton.classList.add("package-dropdown-btn");
+        //     dropdownButton.classList.add(p.category);
+        //     dropdownContent.classList.add("package-dropdown-content");
+        //     dropdownContent.classList.add(p.category);
+        //     dropdownMenu.id = p.category;
+        //     dropdownButton.id = "package-dropdown-btn";
+        //     dropdownButton.tabIndex = 0;  
+
+        //     for (let item of p.packages) {
+        //         var subItem = document.createElement("p");
+
+        //         subItem.classList.add("package-dropdown-item");
+        //         subItem.classList.add(item.package);
+        //         subItem.innerText = item.name;
+
+        //         dropdownContent.appendChild(subItem);
+        //     }
+
+        //     dropdownButton.innerText = p.packages[0].name;
+        //     dropdownMenu.appendChild(dropdownButton);
+        //     dropdownMenu.appendChild(dropdownContent);
+
+        //     packageDetailsContainer.appendChild(dropdownMenu);
+        // }
+
+        // Initialize Cards
+        for (let category of packages) {
+
+            // >>>>>>>>>>> Initialize elements <<<<<<<<<<<<
+            // Swiper Content 
+            var swiperSlide = document.createElement("div");
+            var swiperContent = document.createElement("div");
+            var imageWrapper = document.createElement("div");
+            var image = document.createElement("img");
+            // Details 
+            var details = document.createElement("div");
+            var detailsContent = document.createElement("div");
+            var packageDetailsContainer = document.createElement("div");
+            var packageDetails = document.createElement("div");
+            var packageBackBtn = document.createElement("i");
+            var packageName = document.createElement("h3");
+            var openCalendlyBtn = document.createElement("button");
+            var calendlyButtonText = document.createElement("span");
+            // Dropdown Menu
+            var dropdownMenu = document.createElement("div");
+            var dropdownContent = document.createElement("div");
+            var dropdownButton = document.createElement("div");
+
+
+            // >>>>>>>>>>> Add corresponding classes to elements <<<<<<<<<<<<
+            // Swiper Content Class 
+            swiperSlide.classList.add("swiper-slide");
+            swiperContent.classList.add("swiper-content");
+            imageWrapper.classList.add("image-wrapper");
+
+            image.src = category.image;
+            image.draggable = false;
+            // Details Content 
+            details.classList.add("details");
+            detailsContent.classList.add("details-content");
+            packageDetailsContainer.classList.add("package-details-container");
+            packageDetails.classList.add("select-package-details");
+            packageBackBtn.classList.add("button");
+            packageBackBtn.classList.add("fa");
+            packageBackBtn.classList.add("fa-close");
+            packageBackBtn.classList.add("package-back-btn");
+            packageName.classList.add("heading-1");
+            openCalendlyBtn.classList.add("button-slanted");
+            openCalendlyBtn.classList.add("open-calendly-button");
+
+            packageBackBtn.tabIndex = 0;
+            openCalendlyBtn.id = "product-details-btn";
+            calendlyButtonText.innerText = "Set an Appointment";
+            packageName.id = "package-name";
+
+            packageName.innerText = category.categoryName;
+
+            // Dropdown Menu
+            dropdownMenu.classList.add("package-dropdown");
+            dropdownButton.classList.add("package-dropdown-btn");
+            dropdownButton.classList.add(category.category);
+            dropdownContent.classList.add("package-dropdown-content");
+            dropdownContent.classList.add(category.category);
+            dropdownMenu.id = category.category;
+            dropdownButton.id = "package-dropdown-btn";
+
+            for (let item of category.packages) {
+                var subItem = document.createElement("p");
+
+                subItem.classList.add("package-dropdown-item");
+                subItem.classList.add(item.package);
+                subItem.innerText = item.name;
+
+                dropdownContent.appendChild(subItem);
+            }
+
+            dropdownButton.innerText = category.packages[0].name;
+
+
+            // >>>>>>>>>>> Append children to coresponding parents <<<<<<<<<<<<
+            // Swiper Content Children 
+            imageWrapper.appendChild(image)
+            swiperContent.appendChild(imageWrapper);
+            // Details Children 
+            openCalendlyBtn.appendChild(calendlyButtonText);
+            packageDetailsContainer.appendChild(packageName);
+            dropdownMenu.appendChild(dropdownButton);
+            dropdownMenu.appendChild(dropdownContent);
+            packageDetailsContainer.appendChild(dropdownMenu);
+            packageDetailsContainer.appendChild(packageDetails);
+            detailsContent.appendChild(packageBackBtn);
+            detailsContent.appendChild(packageDetailsContainer);
+            detailsContent.appendChild(openCalendlyBtn);
+            details.appendChild(detailsContent);
+
+            showPackageDetails(packageName, dropdownMenu, packageDetails);
+            
+            swiperSlide.appendChild(swiperContent);
+            swiperSlide.appendChild(details);
+            swiperWrapper.appendChild(swiperSlide);
+        }
+
+        // Initialize swiper slide open and close
+        body.addEventListener("click", (e) => {
+            var swiperWrapper = document.querySelector(".swiper-wrapper");
+            var swipperWrapperChildren = [...swiperWrapper.children];
+            var activeSlide = swipperWrapperChildren.find(el => el.classList.contains("swiper-slide-active"));
+            var activeSlideChildren = [...activeSlide.children];
+            var swiperContent = activeSlideChildren.find(el => el.classList.contains("swiper-content"))
+
+            if (activeSlideChildren[0].classList.contains("active") && !e.target.closest(".details") ) {
+                hidePackage(swiperContent);
+            }
+            else if (!activeSlideChildren[0].classList.contains("active") && e.target.closest(".swiper-content")) {
+                showPackage(swiperContent);
+            }
+            else if (e.target.classList.contains("package-back-btn")) {
+                hidePackage(swiperContent);
+            }
+        })
+        
+        // Initialize dropdown menu
+        for (const dropdown of document.querySelectorAll(".package-dropdown-btn")) {
+            dropdown.addEventListener("click", (e) => {
+                let packageDropdown = e.target.parentNode;
+                let packageContent = e.target.nextElementSibling;
+
+                packageContent.classList.toggle("active");
+            })
+        }
+
+        // Initialize dropdown items
+        for (const dropdownItem of document.querySelectorAll(".package-dropdown-item")) {
+            var packageName, dropdownMenu, packageDetails;
+
+            dropdownItem.addEventListener("click", (e) => {
+                let packageDropdownBtn = e.target.parentNode.parentNode.children[0];
+                let packageContent = e.target.parentNode;
+                let packageContentChildren = [... packageContent.parentNode.parentNode.children];
+
+                packageName = packageContentChildren.find(c => c.id === "package-name");
+                dropdownMenu = packageContentChildren.find(c => c.classList.contains("package-dropdown"));
+                packageDetails = packageContentChildren.find(c => c.classList.contains("select-package-details"));
+
+                packageDropdownBtn.innerText = e.target.innerText;
+                packageContent.classList.remove("active");
+                showPackageDetails(packageName, dropdownMenu, packageDetails);
+            })
+        }
+
+        // Last to call to initialize the slides before initializing the swiper
+        const swiper = createNewSwiper();
+
+        // Hide package on Enter when back button is focused on tab
+        for (let backBtn of document.querySelectorAll("package-back-btn")) {
+            backBtn.addEventListener("keydown", (e) => {
+                // Enter Key
+                if (e.keyCode === 13) {
+                    console.log("Enter key pressed")
+                    // let swiperWrapperChildren = [...swiperWrapper.children];
+                    // let activeSlide = swiperWrapperChildren.find(el => el.classList.contains("swiper-slide-active"));
+
+                    // hidePackage(activeSlide.children[0]);
+                }
+            })
+        }
+
+        for (let swiperSlide of swiperWrapper.children) {
+            swiperSlide.addEventListener("mouseover", () => {
+                // Insert code to disable mouseover when a slide content is active 
+
+                if(swiperSlide.classList.contains("swiper-slide-prev")) {
+                    swiper.slidePrev(700);
+                }
+                if(swiperSlide.classList.contains("swiper-slide-next")) {
+                    swiper.slideNext(700);
+                }
+            })
+        }
+
+        for (let swiperSlide of swiperWrapper.children) {
+            swiperSlide.addEventListener("click", () => {
+                if (swiperSlide.classList.contains("swiper-slide-prev")) {
+                    swiper.slidePrev(700);
+                }
+                if (swiperSlide.classList.contains("swiper-slide-next")) {
+                    swiper.slideNext(700);
+                }
+            })
+        }
+
+        for (let btn of document.querySelectorAll(".open-calendly-button")) {
+            btn.addEventListener("click", (e) => {
+                if (btn.href && btn.href !== "") {
+                    Calendly.initPopupWidget({ url: btn.href, color: '#a30a24', textColor: '#ffffff', branding: undefined });
+                }
+            })
+        }
+
+        body.addEventListener("keydown", (e) => {
+            // Arrow Left Key
+            if (e.keyCode === 37) {
+                swiper.slidePrev(700);
+            }
+            // Arrow Right Key
+            if (e.keyCode === 39) {
+                swiper.slideNext(700);
+            }
+            // Enter Key
+            if (e.keyCode === 13) {
+                let swiperWrapperChildren = [...swiperWrapper.children];
+                let activeSlide = swiperWrapperChildren.find(el => el.classList.contains("swiper-slide-active"));
+
+                showPackage(activeSlide.children[0]);
+            }
+            // Escape Key
+            if (e.keyCode === 27) {
+                let swiperWrapperChildren = [...swiperWrapper.children];
+                let activeSlide = swiperWrapperChildren.find(el => el.classList.contains("swiper-slide-active"));
+
+                hidePackage(activeSlide.children[0]);
+            }
+        });
+
+    </script>
 </body>
 
 </html>

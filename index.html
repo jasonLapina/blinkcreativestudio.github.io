@@ -133,12 +133,12 @@
                         fill="#A30A24" />
                 </svg>
             </a>
-
+    
             <button id="burger" aria-label="Toggle Menu." aria-pressed="false" aria-controls="nav-list"
                 aria-expanded="false">
                 <span></span><span></span><span></span>
             </button>
-
+    
             <ul id="navbar-list" class="navbar-list d-flex" aria-hidden="true">
                 <li class="hide-desktop"><span class="menu-span">Menu</span></li>
                 <li class="active"><a class="menu" href="/">Home</a></li>
@@ -146,13 +146,12 @@
                 <li><a class="menu" href="/works">Works</a></li>
                 <li><a class="menu" href="/studio">Studio</a></li>
                 <li><a class="menu" href="/events">Events</a></li>
-                <!-- <li><a class="menu" id="menu-contact" href="#contact">Contact</a></li> -->
-                <!-- <a class="menu" id="menu-contact" href="/appointments">
+                <!-- <li><a class="menu" id="menu-contact" href="/events">Events</a></li> -->
+    
+                <a class="menu" id="menu-contact" href="/appointments">
                     <button class="button-slanted modal-button nav-button" id="book-now-btn"><span>Book Now</span></button>
-                </a> -->
-
-                <!-- <button class="button-slanted modal-button nav-button open-modal-button" id="book-now-btn"><span>Book Now</span></button> -->
-
+                </a>
+    
                 <li class="pt-5 hide-desktop"><span class="menu-span">Get in touch</span></li>
                 <li class="hide-desktop"><a class="menu-contact underline-100"
                         href="mailto:hello@blinkcreativestudio.com">hello@blinkcreativestudio.com</a></li>
@@ -283,6 +282,7 @@
                                     fill="#A30A24" />
                             </svg>
 
+                            <p class="heading4 mt-4">Audio-Visual <br> Production</p>
                             <p class="heading4 mt-4">Audio-Visual <br> Production</p>
                         </div>
                     </a>
@@ -595,15 +595,30 @@
 
         function changeShowreelBtnFunc() {
             changeShowreelBtnToEventsBtn();
-            setTimeout(changeEventsBtnToShowreelBtn, 3000);
+            setTimeout(changeEventsBtnToShootBtn, 3000);
+            setTimeout(changeShootBtnToShowreelBtn, 6000);
             
             setInterval(() => {
                 changeShowreelBtnToEventsBtn();
-                setTimeout(changeEventsBtnToShowreelBtn, 3000);
+                setTimeout(changeEventsBtnToShootBtn, 3000);
+                setTimeout(changeShootBtnToShowreelBtn, 6000);
             }, 12000)
+        }
+
+        function changeEventsBtnToShootBtn() {
+            srbtnText.innerText = "Book a Shoot";
+            srbtn.removeEventListener('click', setEventsBtnFunc);
+            srbtn.addEventListener('click', setShootBtnFunc);
+        }
+
+         function changeShootBtnToShowreelBtn() {
+            srbtnText.innerText = "Watch Our Showreel";
+            srbtn.removeEventListener('click', setShootBtnFunc);
+            srbtn.addEventListener('click', setShowreelBtnFunc);
         }
         
         function changeShowreelBtnToEventsBtn() {
+            srbtnText.innerText = "Join Us";
             srbtnText.innerText = "Join Us";
             srbtn.removeEventListener('click', setShowreelBtnFunc);
             srbtn.addEventListener('click', setEventsBtnFunc);
@@ -617,6 +632,10 @@
         
         function setEventsBtnFunc() {
             location.href = "/events";
+        }
+
+        function setShootBtnFunc() {
+            location.href = "/appointments";
         }
         
         function setShowreelBtnFunc() {
