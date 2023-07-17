@@ -376,7 +376,9 @@
             var dropdownButton = dropdownMenuChildren.find(el => el.id === "package-dropdown-btn");
             var activeCategory = packages.find(el => el.categoryName === packageName.innerText);
             var activePackage = activeCategory.packages.find(el => el.name === dropdownButton.innerText);
-            var appointmentBtn = packageName.parentNode.nextElementSibling;
+            // var appointmentBtn = packageName.parentNode.nextElementSibling;
+            var appointmentBtn = document.createElement("button");
+            var appointmentBtnText = document.createElement("span");
 
             var price = document.createElement("h3");
             var desc = document.createElement("p");
@@ -390,6 +392,7 @@
             desc.innerText = activePackage.desc;
             desc2.innerText = activePackage.desc2;
             appointmentBtn.href = activePackage.calendly_link;
+            appointmentBtnText.innerText = "Book Now";
 
             for (let i of activePackage.inclusions) {
                 let item = document.createElement("li");
@@ -398,10 +401,14 @@
                 inclusions.appendChild(item);
             }
 
+            appointmentBtn.classList.add("button-slanted");
+            appointmentBtn.classList.add("open-calendly-button");
+            appointmentBtn.id = "product-details-btn";
             desc.classList.add("package-desc");
             desc2.classList.add("package-desc");
             inclusions.classList.add("package-inclusions");
 
+            appointmentBtn.appendChild(appointmentBtnText);
             packageDetails.appendChild(price);
             packageDetails.appendChild(desc);
             packageDetails.appendChild(desc2);
@@ -431,41 +438,9 @@
                 packageDetails.appendChild(inclusionsHeader);
                 packageDetails.appendChild(inclusions);
             }
+
+            packageDetails.appendChild(appointmentBtn);
         }
-
-        // const fillCategoryPackages = (p, packageDetailsContainer) => {
-        //     console.log(p.category)
-        //     if (p.category === "studio-rental") return;
-
-        //     var dropdownMenu = document.createElement("div");
-        //     var dropdownContent = document.createElement("div");
-        //     var dropdownButton = document.createElement("div");
-
-        //     dropdownMenu.classList.add("package-dropdown");
-        //     dropdownButton.classList.add("package-dropdown-btn");
-        //     dropdownButton.classList.add(p.category);
-        //     dropdownContent.classList.add("package-dropdown-content");
-        //     dropdownContent.classList.add(p.category);
-        //     dropdownMenu.id = p.category;
-        //     dropdownButton.id = "package-dropdown-btn";
-        //     dropdownButton.tabIndex = 0;  
-
-        //     for (let item of p.packages) {
-        //         var subItem = document.createElement("p");
-
-        //         subItem.classList.add("package-dropdown-item");
-        //         subItem.classList.add(item.package);
-        //         subItem.innerText = item.name;
-
-        //         dropdownContent.appendChild(subItem);
-        //     }
-
-        //     dropdownButton.innerText = p.packages[0].name;
-        //     dropdownMenu.appendChild(dropdownButton);
-        //     dropdownMenu.appendChild(dropdownContent);
-
-        //     packageDetailsContainer.appendChild(dropdownMenu);
-        // }
 
         // Initialize Cards
         for (let category of packages) {
@@ -483,8 +458,8 @@
             var packageDetails = document.createElement("div");
             var packageBackBtn = document.createElement("i");
             var packageName = document.createElement("h3");
-            var openCalendlyBtn = document.createElement("button");
-            var calendlyButtonText = document.createElement("span");
+            // var openCalendlyBtn = document.createElement("button");
+            // var calendlyButtonText = document.createElement("span");
             // Dropdown Menu
             var dropdownMenu = document.createElement("div");
             var dropdownContent = document.createElement("div");
@@ -509,12 +484,12 @@
             packageBackBtn.classList.add("fa-close");
             packageBackBtn.classList.add("package-back-btn");
             packageName.classList.add("heading-1");
-            openCalendlyBtn.classList.add("button-slanted");
-            openCalendlyBtn.classList.add("open-calendly-button");
+            // openCalendlyBtn.classList.add("button-slanted");
+            // openCalendlyBtn.classList.add("open-calendly-button");
 
             packageBackBtn.tabIndex = 0;
-            openCalendlyBtn.id = "product-details-btn";
-            calendlyButtonText.innerText = "Set an Appointment";
+            // openCalendlyBtn.id = "product-details-btn";
+            // calendlyButtonText.innerText = "Set an Appointment";
             packageName.id = "package-name";
 
             packageName.innerText = category.categoryName;
@@ -546,7 +521,7 @@
             imageWrapper.appendChild(image)
             swiperContent.appendChild(imageWrapper);
             // Details Children 
-            openCalendlyBtn.appendChild(calendlyButtonText);
+            // openCalendlyBtn.appendChild(calendlyButtonText);
             packageDetailsContainer.appendChild(packageName);
             dropdownMenu.appendChild(dropdownButton);
             dropdownMenu.appendChild(dropdownContent);
@@ -554,7 +529,7 @@
             packageDetailsContainer.appendChild(packageDetails);
             detailsContent.appendChild(packageBackBtn);
             detailsContent.appendChild(packageDetailsContainer);
-            detailsContent.appendChild(openCalendlyBtn);
+            // detailsContent.appendChild(openCalendlyBtn);
             details.appendChild(detailsContent);
 
             showPackageDetails(packageName, dropdownMenu, packageDetails);
@@ -572,7 +547,7 @@
             var activeSlideChildren = [...activeSlide.children];
             var swiperContent = activeSlideChildren.find(el => el.classList.contains("swiper-content"))
 
-            if (activeSlideChildren[0].classList.contains("active") && !e.target.closest(".details") ) {
+            if (activeSlideChildren[0].classList.contains("active") && !e.target.closest(".swiper-slide-active") ) {
                 hidePackage(swiperContent);
             }
             else if (!activeSlideChildren[0].classList.contains("active") && e.target.closest(".swiper-content")) {
