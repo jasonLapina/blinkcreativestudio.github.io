@@ -154,7 +154,7 @@ const packages = [
                 id: "4-1",
                 package: "bronze",
                 name: "Bronze",
-                price: "849.00",
+                price: "1,100.00",
                 desc: "Graduating from UP means you are the cream of the crop. Capture the essence of your UP graduation with our exclusive photography packages. Preserve this milestone forever with our expertly edited digital photographs. Book your package today!",
                 desc2 : "Hair and makeup included. Downpayment should not exceed more than 2 days after booking.",
                 inclusions : [
