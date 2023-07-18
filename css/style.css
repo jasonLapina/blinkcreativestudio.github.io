@@ -2869,3 +2869,17 @@ div.mce_inline_error {
 .mc-name {
   width: 100%;
 }
+
+.mobile-book-now-btn {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .mobile-book-now-btn {
+    display: block;
+  }
+
+  .mobile-book-now-btn span {
+    font-size: 12px;
+  }
+}
