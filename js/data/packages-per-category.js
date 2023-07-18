@@ -237,8 +237,8 @@ const packages = [
         packages: [
             {
                 id: "5-1",
-                package: "baby-bump",
-                name: "Baby Bump",
+                package: "baby-bump-bliss",
+                name: "Baby Bump Bliss",
                 price: "1,499.00",
                 desc: "Let the miracle of motherhood shine with our exclusive maternity packages. Our skilled photographers specialize in capturing the beauty and joy of pregnancy, from elegant solo shots to heartwarming family moments. Book today!",
                 desc2 : "Downpayment should not exceed more than 2 days after booking.",
@@ -253,8 +253,8 @@ const packages = [
             },
             {
                 id: "5-2",
-                package: "im-pregnant",
-                name: "I'm Pregnant!",
+                package: "great-expectations",
+                name: "Great Expectations",
                 price: "1,999.00",
                 desc: "Let the miracle of motherhood shine with our exclusive maternity packages. Our skilled photographers specialize in capturing the beauty and joy of pregnancy, from elegant solo shots to heartwarming family moments. Book today!",
                 desc2 : "Downpayment should not exceed more than 2 days after booking.",
@@ -277,8 +277,8 @@ const packages = [
         packages: [
             {
                 id: "6-1",
-                package: "baby-step-1",
-                name: "Baby Step 1",
+                package: "baby-steps",
+                name: "Baby Steps",
                 price: "4,000.00",
                 desc: "Capture the joyous moments of your baby's journey with our professional baby photo packages. Our skilled photographers will capture their adorable smiles, curious expressions, and heartwarming milestones, from newborn sessions and beyond.",
                 desc2 : "Downpayment should not exceed more than 2 days after booking.",
@@ -299,8 +299,8 @@ const packages = [
             },
             {
                 id: "6-2",
-                package: "baby-step-2",
-                name: "Baby Step 2",
+                package: "little-blessings",
+                name: "Little Blessings",
                 price: "5,000.00",
                 desc: "Capture the joyous moments of your baby's journey with our professional baby photo packages. Our skilled photographers will capture their adorable smiles, curious expressions, and heartwarming milestones, from newborn sessions and beyond.",
                 desc2 : "Downpayment should not exceed more than 2 days after booking.",
@@ -321,21 +321,6 @@ const packages = [
             },
             {
                 id: "6-3",
-                package: "the-full-collection",
-                name: "The Full Collection",
-                price: "24,000.00",
-                desc: "Capture the joyous moments of your baby's journey with our professional baby photo packages. Our skilled photographers will capture their adorable smiles, curious expressions, and heartwarming milestones, from newborn sessions and beyond.",
-                desc2 : "12 Sessions (1-12 months). Downpayment should not exceed more than 2 days after booking.",
-                inclusions : [
-                    "30-45 mins. studio time",
-                    "Unlimited shots",
-                    "1 pcs. 5R print",
-                    "5 enhanced digital copies (client's choice)",
-                ],
-                calendly_link : "https://calendly.com/blinkcreativestudio/baby-milestone-package-full-collection?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24"
-            },
-            {
-                id: "6-5",
                 package: "bouncing-baby",
                 name: "Bouncing Baby",
                 price: "6,499.00",
@@ -353,7 +338,7 @@ const packages = [
                 calendly_link : "https://calendly.com/blinkcreativestudio/baby-milestone-package-bouncing-baby?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24"
             },
             {
-                id: "6-6",
+                id: "6-4",
                 package: "bundle-of-joy",
                 name: "Bundle of Joy",
                 price: "7,499.00",
@@ -371,7 +356,22 @@ const packages = [
                 calendly_link : "https://calendly.com/blinkcreativestudio/baby-milestone-package-bundle-of-joy?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24"
             },
             {
-                id: "6-7",
+                id: "6-5",
+                package: "elite-infant-collection",
+                name: "The Elite Infant Collection",
+                price: "24,000.00",
+                desc: "Capture the joyous moments of your baby's journey with our professional baby photo packages. Our skilled photographers will capture their adorable smiles, curious expressions, and heartwarming milestones, from newborn sessions and beyond.",
+                desc2 : "12 Sessions (1-12 months). Downpayment should not exceed more than 2 days after booking.",
+                inclusions : [
+                    "30-45 mins. studio time",
+                    "Unlimited shots",
+                    "1 pcs. 5R print",
+                    "5 enhanced digital copies (client's choice)",
+                ],
+                calendly_link : "https://calendly.com/blinkcreativestudio/baby-milestone-package-full-collection?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24"
+            },
+            {
+                id: "6-6",
                 package: "fresh-48",
                 name: "Fresh 48",
                 price: "4,499.00",
@@ -396,8 +396,8 @@ const packages = [
         packages: [
             {
                 id: "7-1",
-                package: "keep-it-simple",
-                name: "Let's Keep it Simple",
+                package: "little-stars",
+                name: "Little Stars",
                 price: "849.00",
                 desc: "Childhood is the most magical time of our lives. Capture your kiddo’s milestones and special moments with our fun and engaging photo packages for toddlers and kiddies. Book your pre-birthday package or kiddie photo session and let the magic unfold.",
                 desc2 : "Hair and makeup included. Downpayment should not exceed more than 2 days after booking.",
@@ -411,8 +411,8 @@ const packages = [
             },
             {
                 id: "7-2",
-                package: "little-celebration",
-                name: "Just a Little Celebration",
+                package: "pitter-patter",
+                name: "Pitter Patter",
                 price: "1,499.00",
                 desc: "Childhood is the most magical time of our lives. Capture your kiddo’s milestones and special moments with our fun and engaging photo packages for toddlers and kiddies. Book your pre-birthday package or kiddie photo session and let the magic unfold.",
                 desc2 : "Hair and makeup included. Downpayment should not exceed more than 2 days after booking.",
@@ -426,8 +426,8 @@ const packages = [
             },
             {
                 id: "7-3",
-                package: "big-celebration",
-                name: "It's a Big Celebration",
+                package: "magical-moments",
+                name: "Magical Moments",
                 price: "1,999.00",
                 desc: "Childhood is the most magical time of our lives. Capture your kiddo’s milestones and special moments with our fun and engaging photo packages for toddlers and kiddies. Book your pre-birthday package or kiddie photo session and let the magic unfold.",
                 desc2 : "Hair and makeup included. Downpayment should not exceed more than 2 days after booking.",
@@ -451,8 +451,8 @@ const packages = [
         packages: [
             {
                 id: "8-1",
-                package: "good-times",
-                name: "Good Times",
+                package: "family-bonds",
+                name: "Family Bonds",
                 price: "899.00",
                 desc: "Family is forever. Gather your loved ones and let our experienced photographers capture the joy, love, and connection that defines your family. We'll create beautiful portraits that reflect your family's unique dynamics and personalities. Book today!",
                 desc2 : "Downpayment should not exceed more than 2 days after booking.",
@@ -466,8 +466,8 @@ const packages = [
             },
             {
                 id: "8-2",
-                package: "better-together",
-                name: "Better Together",
+                package: "love-n-laughter",
+                name: "Love & Laughter",
                 price: "1,499.00",
                 desc: "Family is forever. Gather your loved ones and let our experienced photographers capture the joy, love, and connection that defines your family. We'll create beautiful portraits that reflect your family's unique dynamics and personalities. Book today!",
                 desc2 : "Downpayment should not exceed more than 2 days after booking.",
@@ -482,24 +482,8 @@ const packages = [
             },
             {
                 id: "8-3",
-                package: "family-knows-better",
-                name: "Family Knows Better",
-                price: "2,499.00",
-                desc: "Family is forever. Gather your loved ones and let our experienced photographers capture the joy, love, and connection that defines your family. We'll create beautiful portraits that reflect your family's unique dynamics and personalities. Book today!",
-                desc2 : "Downpayment should not exceed more than 2 days after booking.",
-                inclusions : [
-                    "2 attires",
-                    "1 photographer",
-                    "Unlimited shots",
-                    "1 pc. 11R print with frame",
-                    "3 enhanced digital copy"
-                ],
-                calendly_link : "https://calendly.com/blinkcreativestudio/family-package-family-knows-better?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24"
-            },
-            {
-                id: "8-4",
-                package: "family-knows-best",
-                name: "Family Knows Best",
+                package: "treasured-connections",
+                name: "Treasured Connections",
                 price: "1,999.00",
                 desc: "Family is forever. Gather your loved ones and let our experienced photographers capture the joy, love, and connection that defines your family. We'll create beautiful portraits that reflect your family's unique dynamics and personalities. Book today!",
                 desc2 : "Downpayment should not exceed more than 2 days after booking.",
@@ -512,6 +496,22 @@ const packages = [
                 ],
                 calendly_link : "https://calendly.com/blinkcreativestudio/family-package-family-knows-best?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24"
             },
+            {
+                id: "8-4",
+                package: "generations-legacy",
+                name: "Generations Legacy",
+                price: "2,499.00",
+                desc: "Family is forever. Gather your loved ones and let our experienced photographers capture the joy, love, and connection that defines your family. We'll create beautiful portraits that reflect your family's unique dynamics and personalities. Book today!",
+                desc2 : "Downpayment should not exceed more than 2 days after booking.",
+                inclusions : [
+                    "2 attires",
+                    "1 photographer",
+                    "Unlimited shots",
+                    "1 pc. 11R print with frame",
+                    "3 enhanced digital copy"
+                ],
+                calendly_link : "https://calendly.com/blinkcreativestudio/family-package-family-knows-better?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24"
+            }
         ]
     },
     {
@@ -522,8 +522,8 @@ const packages = [
         packages: [
             {
                 id: "9-1",
-                package: "tie-the-knot",
-                name: "Tie the Knot",
+                package: "everlasting-bliss",
+                name: "Everlasting Bliss",
                 price: "70,000.00",
                 desc: "Capture the magic of your wedding day. Our expert photographers and videographers will document every moment, from the heartfelt vows to the lively reception. Let us tell your love story. Book now and create memories that will last a lifetime.",
                 desc2 : "Downpayment should not exceed more than 2 days after booking.",
@@ -546,8 +546,8 @@ const packages = [
             },
             {
                 id: "9-2",
-                package: "happily-ever-after",
-                name: "Happily Ever After",
+                package: "eternal-love",
+                name: "Eternal Love",
                 price: "75,000.00",
                 desc: "Capture the magic of your wedding day. Our expert photographers and videographers will document every moment, from the heartfelt vows to the lively reception. Let us tell your love story. Book now and create memories that will last a lifetime.",
                 desc2 : "Downpayment should not exceed more than 2 days after booking.",
@@ -579,8 +579,8 @@ const packages = [
         packages: [
             {
                 id: "10-1",
-                package: "sweet-eighteen",
-                name: "Sweet Eighteen",
+                package: "elegance",
+                name: "Elegance",
                 price: "35,000.00",
                 desc: "Celebrate your coming-of-age milestone in style. From the grand entrance to the heartfelt speeches, we'll be there to preserve the essence and excitement of your debut. Let us create a stunning visual narrative that you can cherish for a lifetime. Book today!",
                 desc2 : "Downpayment should not exceed more than 2 days after booking.",
@@ -600,8 +600,8 @@ const packages = [
             },
             {
                 id: "10-2",
-                package: "elegant-lady",
-                name: "Elegant Lady",
+                package: "glamour",
+                name: "Glamour",
                 price: "40,000.00",
                 desc: "Celebrate your coming-of-age milestone in style. From the grand entrance to the heartfelt speeches, we'll be there to preserve the essence and excitement of your debut. Let us create a stunning visual narrative that you can cherish for a lifetime. Book today!",
                 desc2 : "Downpayment should not exceed more than 2 days after booking.",

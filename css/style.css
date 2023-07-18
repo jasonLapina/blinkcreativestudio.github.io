@@ -2875,11 +2875,16 @@ div.mce_inline_error {
 }
 
 @media (max-width: 767px) {
-  .mobile-book-now-btn {
-    display: block;
+  .button-slanted.nav-button.mobile-book-now-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 2px 8px;
+    transform: unset;
   }
 
   .mobile-book-now-btn span {
-    font-size: 12px;
+    font-size: 10px;
+    transform: unset;
   }
 }
