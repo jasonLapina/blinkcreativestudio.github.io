@@ -265,7 +265,7 @@ const packages = [
                     "2 pcs. 5R print and framed",
                     "2 enhanced digital copy"
                 ],
-                calendly_link : "https://calendly.com/blinkcreativestudio/maternity-package-im-pregnant?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24"
+                calendly_link : "https://calendly.com/blinkcreativestudio/maternity-package-great-expectations?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24"
             },
         ]
     },
@@ -295,7 +295,7 @@ const packages = [
                     "6x6 10 pages photo album (softbound)",
                     "All raw photos will be given"
                 ],
-                calendly_link : "https://calendly.com/blinkcreativestudio/baby-milestone-package-baby-step-1?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24"
+                calendly_link : "https://calendly.com/blinkcreativestudio/baby-milestone-package-baby-steps?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24"
             },
             {
                 id: "6-2",
@@ -317,7 +317,7 @@ const packages = [
                     "6x6 20 pages photo album (softbound)",
                     "All raw photos will be given"
                 ],
-                calendly_link : "https://calendly.com/blinkcreativestudio/baby-milestone-package-baby-step-2?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24"
+                calendly_link : "https://calendly.com/blinkcreativestudio/baby-milestone-package-little-blessings?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24"
             },
             {
                 id: "6-3",
@@ -368,23 +368,7 @@ const packages = [
                     "1 pcs. 5R print",
                     "5 enhanced digital copies (client's choice)",
                 ],
-                calendly_link : "https://calendly.com/blinkcreativestudio/baby-milestone-package-full-collection?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24"
-            },
-            {
-                id: "6-6",
-                package: "fresh-48",
-                name: "Fresh 48",
-                price: "4,499.00",
-                desc: "Capture the joyous moments of your baby's journey with our professional baby photo packages. Our skilled photographers will capture their adorable smiles, curious expressions, and heartwarming milestones, from newborn sessions and beyond.",
-                desc2 : "Downpayment should not exceed more than 2 days after booking.",
-                inclusions : [
-                    "1-hour photoshoot",
-                    "1-2 days after birth",
-                    "Includes family members",
-                    "3 enhanced digital copies (client's choice)",
-                    "All raw photos will be given"
-                ],
-                calendly_link : "https://calendly.com/blinkcreativestudio/baby-milestone-package-fresh-48?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24"
+                calendly_link : "https://calendly.com/blinkcreativestudio/baby-milestone-package-elite-infant-collection?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24"
             }
         ]
     },
@@ -407,7 +391,7 @@ const packages = [
                     "Unlimited shots",
                     "1 enhanced digital copy"
                 ],
-                calendly_link : "https://calendly.com/blinkcreativestudio/kid-package-keep-it-simple?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24"
+                calendly_link : "https://calendly.com/blinkcreativestudio/kid-package-little-stars?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24"
             },
             {
                 id: "7-2",
@@ -422,7 +406,7 @@ const packages = [
                     "Unlimited shots",
                     "1 simple invitation layout"
                 ],
-                calendly_link : "https://calendly.com/blinkcreativestudio/kiddie-pre-birthday-package-little-celebration?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24"
+                calendly_link : "https://calendly.com/blinkcreativestudio/kiddie-pre-birthday-package-pitter-patter?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24"
             },
             {
                 id: "7-3",
@@ -439,7 +423,7 @@ const packages = [
                     "1 tarpaulin layout",
                     "5 enhanced digital copies"
                 ],
-                calendly_link : "https://calendly.com/blinkcreativestudio/kiddie-pre-birthday-package-big-celebration?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24"
+                calendly_link : "https://calendly.com/blinkcreativestudio/kiddie-pre-birthday-package-magical-moments?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24"
             },
         ]
     },
@@ -462,7 +446,7 @@ const packages = [
                     "15-20 shots",
                     "1 enhanced digital copy"
                 ],
-                calendly_link : "https://calendly.com/blinkcreativestudio/fam-package-good-times?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24"
+                calendly_link : "https://calendly.com/blinkcreativestudio/fam-package-family-bonds?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24"
             },
             {
                 id: "8-2",
@@ -478,7 +462,7 @@ const packages = [
                     "1 pc. 8R print with frame",
                     "2 enhanced digital copy"
                 ],
-                calendly_link : "https://calendly.com/blinkcreativestudio/family-package-better-together?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24"
+                calendly_link : "https://calendly.com/blinkcreativestudio/family-package-love-n-laughter?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24"
             },
             {
                 id: "8-3",
@@ -494,7 +478,7 @@ const packages = [
                     "2 pcs. 5R print with 2-in-1 5R frame",
                     "3 enhanced digital copy"
                 ],
-                calendly_link : "https://calendly.com/blinkcreativestudio/family-package-family-knows-best?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24"
+                calendly_link : "https://calendly.com/blinkcreativestudio/family-package-treasured-connections?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24"
             },
             {
                 id: "8-4",
@@ -510,7 +494,7 @@ const packages = [
                     "1 pc. 11R print with frame",
                     "3 enhanced digital copy"
                 ],
-                calendly_link : "https://calendly.com/blinkcreativestudio/family-package-family-knows-better?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24"
+                calendly_link : "https://calendly.com/blinkcreativestudio/family-package-generations-legacy?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24"
             }
         ]
     },
@@ -542,7 +526,7 @@ const packages = [
                     "Studio photoshoot",
                     "11R print with frame"
                 ],
-                calendly_link : "https://calendly.com/blinkcreativestudio/wedding-package-tie-the-knot?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24"
+                calendly_link : "https://calendly.com/blinkcreativestudio/wedding-package-everlasting-bliss?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24"
             },
             {
                 id: "9-2",
@@ -567,7 +551,7 @@ const packages = [
                     "11R print with frame",
                     "8”x10” photobook (20 pages)"
                 ],
-                calendly_link : "https://calendly.com/blinkcreativestudio/wedding-package-happily-ever-after?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24"
+                calendly_link : "https://calendly.com/blinkcreativestudio/wedding-package-eternal-love?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24"
             },
         ]
     },
@@ -596,7 +580,7 @@ const packages = [
                     "Studio photoshoot",
                     "8R print with frame"
                 ],
-                calendly_link : "https://calendly.com/blinkcreativestudio/debut-package-sweet-eighteen?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24"
+                calendly_link : "https://calendly.com/blinkcreativestudio/debut-package-elegance?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24"
             },
             {
                 id: "10-2",
@@ -618,7 +602,7 @@ const packages = [
                     "8R print with frame",
                     "8”x10” photobook (20 pages)"
                 ],
-                calendly_link : "https://calendly.com/blinkcreativestudio/debut-package-elegant-lady?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24"
+                calendly_link : "https://calendly.com/blinkcreativestudio/debut-package-glamour?hide_gdpr_banner=1&text_color=191919&primary_color=a30a24"
             }
         ]
     }
