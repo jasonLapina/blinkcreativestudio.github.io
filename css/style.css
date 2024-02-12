@@ -2094,6 +2094,7 @@ div.mce_inline_error {
   overflow: hidden;
   background-position: center;
   background-size: cover;
+  padding-top: 64px;
 }
 
 .main-logo-container {
@@ -2372,7 +2373,7 @@ div.mce_inline_error {
 /* -------------------- Small Desktop Viewport -------------------- */
 @media (min-width: 992px) {
   #events-header {
-    padding-top: 84px !important;
+    /* padding-top: 64px !important; */
   }
 
   .main-image-container img {
