@@ -2099,13 +2099,16 @@ div.mce_inline_error {
 .main-logo-container {
   color: var(--white);
   position: relative;
+
+  display: flex;
 }
 
 .main-logo-container img {
   width: 120%;
   height: auto;
   margin-left: -60px;
-  margin-bottom: -8px;
+  /* margin-bottom: -8px; */
+
   /* font-family: "Lato"; */
 }
 
