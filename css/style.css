@@ -2092,6 +2092,8 @@ div.mce_inline_error {
 #events-header {
   background-image: url("/assets/herspective/BCS_HerSpective_BG.jpg");
   overflow: hidden;
+  background-position: center;
+  background-size: cover;
 }
 
 .main-logo-container {
@@ -2104,7 +2106,7 @@ div.mce_inline_error {
   height: auto;
   margin-left: -60px;
   margin-bottom: -8px;
-  font-family: "Lato";
+  /* font-family: "Lato"; */
 }
 
 .main-image-container {
