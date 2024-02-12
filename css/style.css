@@ -2108,9 +2108,9 @@ div.mce_inline_error {
 }
 
 .main-image-container {
-  height: 136px;
+  /* height: 136px; */
   display: flex;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .main-image-container img {
