@@ -2099,7 +2099,6 @@ div.mce_inline_error {
 .main-logo-container {
   color: var(--white);
   position: relative;
-
   display: flex;
 }
 
