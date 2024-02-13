@@ -1494,12 +1494,18 @@
     <script>
       function adjustVideoSource() {
         const video = document.getElementById("banner-video");
+
+        const regBanner = document.querySelector(".sign-up-header");
         const viewportWidth = window.innerWidth;
 
         if (viewportWidth <= 767) {
           video.src = "/assets/herspective/MobileBanner.mp4"; // Change to mobile version
+
+          regBanner.src =
+            "/assets/herspective/BCS_HerSpective_Registration Form Mobile.jpg";
         } else {
           video.src = "/assets/herspective/WebBanner.mp4"; // Default to web version
+          regBanner.src = "/assets/herspective/BCS_HerSpective_RFormBanner.jpg";
         }
       }
 
