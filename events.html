@@ -479,7 +479,7 @@
     <header class="pb-0 overflow-hidden" id="events-header" data-aos="fade-in">
       <div class="text-start text-md-center">
         <div class="row hero-banner">
-          <video autoplay muted loop>
+          <video id="banner-video" autoplay muted loop>
             <source src="/assets/herspective/WebBanner.mp4" />
           </video>
           <!-- <div class="col-7 col-sm-6 text-start main-logo-container">
@@ -1488,6 +1488,24 @@
           closeFAModal();
         });
       }
+    </script>
+
+    <!-- swap video src based on viewport width -->
+    <script>
+      function adjustVideoSource() {
+        const video = document.getElementById("banner-video");
+        const viewportWidth = window.innerWidth;
+
+        if (viewportWidth <= 767) {
+          video.src = "/assets/herspective/MobileBanner.mp4"; // Change to mobile version
+        } else {
+          video.src = "/assets/herspective/WebBanner.mp4"; // Default to web version
+        }
+      }
+
+      // Run the function on page load and when the window is resized
+      window.addEventListener("load", adjustVideoSource);
+      window.addEventListener("resize", adjustVideoSource);
     </script>
   </body>
 </html>
