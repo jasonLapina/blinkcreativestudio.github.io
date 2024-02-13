@@ -1377,12 +1377,15 @@ form #mce-error-response a {
   padding: 0 12px;
   margin-bottom: 12px;
   text-align: center;
+  /* background-color: #fff; */
 }
 
 .modal {
-  padding: 0 8px;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* padding: 0 8px; */
+  /* display: flex; */
+  /* flex-direction: column; */
   align-items: center;
   justify-content: center;
   background-color: #fff;
@@ -1397,8 +1400,9 @@ form #mce-error-response a {
 }
 
 .sign-up-header {
+  /* width: 100%;
+  height: auto; */
   width: 100%;
-  height: auto;
 }
 
 .fa-close {
@@ -1414,9 +1418,11 @@ form #mce-error-response a {
 
 @media (min-width: 768px) {
   .modal {
-    height: unset;
+    /* height: unset;
     width: unset;
-    max-width: 600px;
+    max-width: 600px; */
+    max-width: 1000px;
+    height: unset;
   }
 
   .sign-up-header-container {
@@ -1501,6 +1507,9 @@ input[type="number"] {
 .sign-up-heading {
   text-transform: uppercase;
   letter-spacing: 4px;
+
+  text-align: left;
+  margin-bottom: 40px;
 }
 
 form #mce-responses {
